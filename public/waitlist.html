@@ -1,23 +1,14 @@
-<section class="waitlist-page">
-  <div class="waitlist-intro">
-    <p class="eyebrow">Join the waitlist</p>
-    <h1>Be the first to know when TravelLingo launches.</h1>
-    <p>
-      Get notified when TravelLingo is available for Spanish, French, Italian, and German travel phrase practice.
-    </p>
-  </div>
+function doPost(e) {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Sheet1");
 
-  <div class="waitlist-card">
-    <div class="waitlist-embed">
-      <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLSdlue6WDGOMncQlrK4rXdG9gRriK1fcZ5vJuzkDVpnrt5W9hg/viewform?embedded=true"
-        width="100%"
-        height="1008"
-        frameborder="0"
-        marginheight="0"
-        marginwidth="0">
-        Loading…
-      </iframe>
-    </div>
-  </div>
-</section>
+  sheet.appendRow([
+    new Date(),
+    e.parameter.firstName,
+    e.parameter.email,
+    e.parameter.language
+  ]);
+
+  return ContentService
+    .createTextOutput(JSON.stringify({ result: "success" }))
+    .setMimeType(ContentService.MimeType.JSON);
+}
