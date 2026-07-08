@@ -11,18 +11,12 @@
   box-sizing: border-box;
 }
 
-  body {
-
+body {
   margin: 0;
   font-family: 'Inter', Arial, sans-serif;
   background: var(--cream);
   color: var(--text);
-  font-size: clamp(2.5rem, 6vw, 5rem);
-  line-height: 0.95;
-  margin: 0 0 24px;
-  color: var(--navy);
-  font-weight: 800;
-  letter-spacing: -0.055em;
+  font-weight: 400;
 }
 
 .site-header {
@@ -30,28 +24,21 @@
   align-items: center;
   gap: 12px;
   padding: 24px 7%;
+  white-space: nowrap;
 }
 
-.logo-circle {
-  width: 44px;
-  height: 44px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, var(--orange) 0 50%, var(--navy) 50% 100%);
-  color: white;
-  display: grid;
-  place-items: center;
-  font-weight: 700;
-}
 .logo-img {
   width: 48px;
   height: 48px;
   object-fit: contain;
   border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .brand-name {
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 750;
+  letter-spacing: -0.03em;
   color: var(--navy);
 }
 
@@ -61,22 +48,40 @@
   gap: 48px;
   align-items: center;
   padding: 56px 7% 72px;
+  overflow: hidden;
 }
 
 .eyebrow {
   color: var(--orange);
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
 }
 
 h1 {
-  font-weight: 800;
-  letter-spacing: -0.05em;
   font-size: clamp(2.5rem, 6vw, 5rem);
   line-height: 0.95;
   margin: 0 0 24px;
   color: var(--navy);
+  font-weight: 800;
+  letter-spacing: -0.055em;
+}
+
+h2 {
+  color: var(--navy);
+  font-weight: 750;
+  letter-spacing: -0.035em;
+}
+
+h3 {
+  color: var(--navy);
+  font-weight: 750;
+  letter-spacing: -0.03em;
+}
+
+p {
+  font-weight: 400;
+  line-height: 1.65;
 }
 
 .hero-copy {
@@ -85,9 +90,6 @@ h1 {
   max-width: 620px;
 }
 
-h2 {
-  font-weight: 750;
-  letter-spacing: -0.035em;
 .button {
   display: inline-block;
   margin-top: 18px;
@@ -97,43 +99,18 @@ h2 {
   border-radius: 999px;
   text-decoration: none;
   font-weight: 700;
-  box-shadow: 0 12px 24px rgba(244, 123, 63, 0.25);
-}
-
-h3 {
-  font-weight: 750;
-  letter-spacing: -0.03em;
-}
-
-  p {
-  font-weight: 400;
-  line-height: 1.65;
-}
-
-.brand-name {
-  font-size: 1.25rem;
-  font-weight: 750;
-  letter-spacing: -0.03em;
-  color: var(--navy);
-}
-
-.button {
-  font-weight: 700;
   letter-spacing: -0.015em;
-}
-
-.eyebrow {
-  font-weight: 700;
-  letter-spacing: 0.12em;
+  box-shadow: 0 12px 24px rgba(244, 123, 63, 0.25);
 }
 
 .phone-card {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .phone-frame {
-  width: min(330px, 100%);
+  width: min(320px, 100%);
   background: var(--navy);
   border-radius: 42px;
   padding: 12px;
@@ -144,6 +121,7 @@ h3 {
   width: 100%;
   display: block;
   border-radius: 30px;
+  object-fit: cover;
 }
 
 .features {
@@ -165,7 +143,6 @@ h3 {
 .features h3,
 .positioning h2,
 .waitlist h2 {
-  color: var(--navy);
   margin-top: 0;
 }
 
@@ -180,6 +157,19 @@ h3 {
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.7;
+}
+
+.waitlist-embed {
+  max-width: 760px;
+  margin: 32px auto 0;
+}
+
+.waitlist-embed iframe {
+  width: 100%;
+  min-height: 760px;
+  border: 0;
+  border-radius: 20px;
+  background: white;
 }
 
 footer {
@@ -198,11 +188,15 @@ footer a {
     padding-top: 24px;
   }
 
+  h1 {
+    font-size: clamp(2.6rem, 12vw, 4rem);
+  }
+
   .features {
     grid-template-columns: 1fr;
   }
 
-  .phone {
-    min-height: 480px;
+  .phone-frame {
+    width: min(300px, 100%);
   }
 }
