@@ -1,25 +1,76 @@
-<form class="custom-waitlist-form" action="https://script.google.com/macros/s/AKfycby1G1Vr0cmwVo3fpf6fe5oecnYZc-heazz4dd0fMhdeknbTluNFdTs_wkMWsveo1Bkb/exec" method="POST">
-  <label>
-    First Name
-    <input type="text" name="firstName" required />
-  </label>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join the TravelLingo Waitlist</title>
+  <meta name="description" content="Join the TravelLingo waitlist and be notified when the travel phrase app launches." />
 
-  <label>
-    Email Address
-    <input type="email" name="email" required />
-  </label>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <label>
-    Which language are you most interested in?
-    <select name="language" required>
-      <option value="">Choose one</option>
-      <option value="Spanish">Spanish</option>
-      <option value="French">French</option>
-      <option value="Italian">Italian</option>
-      <option value="German">German</option>
-      <option value="Not sure yet">Not sure yet</option>
-    </select>
-  </label>
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-  <button class="button" type="submit">Join the Waitlist</button>
-</form>
+<body>
+  <header class="site-header">
+    <a class="header-link" href="index.html">
+      <img class="logo-img" src="assets/applogo.png" alt="TravelLingo logo" />
+      <span class="brand-name">TravelLingo</span>
+    </a>
+  </header>
+
+  <main class="waitlist-page">
+    <section class="waitlist-intro">
+      <p class="eyebrow">Join the waitlist</p>
+      <h1>Be the first to know when TravelLingo launches.</h1>
+      <p>
+        Get launch updates for TravelLingo, a beginner-friendly app for learning
+        practical Spanish, French, Italian, and German travel phrases.
+      </p>
+    </section>
+
+    <section class="waitlist-form-card">
+      <form
+        class="custom-waitlist-form"
+        action="https://script.google.com/macros/s/AKfycby1G1Vr0cmwVo3fpf6fe5oecnYZc-heazz4dd0fMhdeknbTluNFdTs_wkMWsveo1Bkb/exec"
+        method="POST"
+      >
+        <label>
+          First Name
+          <input type="text" name="firstName" placeholder="Your first name" required />
+        </label>
+
+        <label>
+          Email Address
+          <input type="email" name="email" placeholder="you@example.com" required />
+        </label>
+
+        <label>
+          Which language are you most interested in?
+          <select name="language" required>
+            <option value="">Choose one</option>
+            <option value="Spanish">Spanish</option>
+            <option value="French">French</option>
+            <option value="Italian">Italian</option>
+            <option value="German">German</option>
+            <option value="Not sure yet">Not sure yet</option>
+          </select>
+        </label>
+
+        <button class="button form-button" type="submit">Join the Waitlist</button>
+
+        <p class="form-note">
+          We’ll only email you about TravelLingo updates and launch news.
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 TravelLingo. All rights reserved.</p>
+    <p><a href="index.html">Back to Home</a></p>
+  </footer>
+</body>
+</html>
