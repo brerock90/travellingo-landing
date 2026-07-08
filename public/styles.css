@@ -200,7 +200,7 @@ p {
 }
 
 .waitlist-form-card {
-  max-width: 500px;
+  max-width: 400px;
   margin: 0 auto;
   background: linear-gradient(180deg, #f6f9fc 0%, #eef5fb 100%);
   padding: 26px;
@@ -231,7 +231,7 @@ p {
   display: block;
   width: 100%;
   margin-top: 7px;
-  height: 30px;
+  height: 40px;
   padding: 12px 14px;
   border: 1px solid #d7dee8;
   border-radius: 13px;
