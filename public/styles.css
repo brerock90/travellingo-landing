@@ -309,3 +309,16 @@ footer a {
     font-size: clamp(2rem, 10vw, 3rem);
   }
 }
+.success-message {
+  text-align: center;
+}
+
+.success-message h2 {
+  margin-top: 0;
+  color: var(--navy);
+}
+
+.success-message p {
+  margin: 0 auto 18px;
+  max-width: 420px;
+}
