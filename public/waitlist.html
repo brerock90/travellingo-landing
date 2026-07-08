@@ -1,14 +1,25 @@
-function doPost(e) {
-  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Sheet1");
+<form class="custom-waitlist-form" action="https://script.google.com/macros/s/AKfycby1G1Vr0cmwVo3fpf6fe5oecnYZc-heazz4dd0fMhdeknbTluNFdTs_wkMWsveo1Bkb/exec" method="POST">
+  <label>
+    First Name
+    <input type="text" name="firstName" required />
+  </label>
 
-  sheet.appendRow([
-    new Date(),
-    e.parameter.firstName,
-    e.parameter.email,
-    e.parameter.language
-  ]);
+  <label>
+    Email Address
+    <input type="email" name="email" required />
+  </label>
 
-  return ContentService
-    .createTextOutput(JSON.stringify({ result: "success" }))
-    .setMimeType(ContentService.MimeType.JSON);
-}
+  <label>
+    Which language are you most interested in?
+    <select name="language" required>
+      <option value="">Choose one</option>
+      <option value="Spanish">Spanish</option>
+      <option value="French">French</option>
+      <option value="Italian">Italian</option>
+      <option value="German">German</option>
+      <option value="Not sure yet">Not sure yet</option>
+    </select>
+  </label>
+
+  <button class="button" type="submit">Join the Waitlist</button>
+</form>
