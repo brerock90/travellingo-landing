@@ -290,3 +290,38 @@ footer a {
     padding: 26px;
   }
 }
+.header-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--navy);
+}
+
+.header-link:visited,
+.header-link:hover,
+.header-link:active {
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.waitlist-intro h1 {
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.custom-waitlist-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.custom-waitlist-form label {
+  margin-bottom: 0;
+}
+
+.form-button {
+  margin-top: 8px;
+}
