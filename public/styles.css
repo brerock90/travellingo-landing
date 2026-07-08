@@ -35,6 +35,12 @@ body {
   place-items: center;
   font-weight: 700;
 }
+.logo-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 50%;
+}
 
 .brand-name {
   font-size: 1.25rem;
@@ -87,36 +93,18 @@ h1 {
   justify-content: center;
 }
 
-.phone {
-  width: min(320px, 100%);
-  min-height: 560px;
-  background: var(--white);
-  border: 12px solid var(--navy);
+.phone-frame {
+  width: min(330px, 100%);
+  background: var(--navy);
   border-radius: 42px;
-  padding: 28px 22px;
+  padding: 12px;
   box-shadow: 0 24px 70px rgba(16, 36, 63, 0.18);
 }
 
-.phone-top {
-  width: 90px;
-  height: 8px;
-  border-radius: 999px;
-  background: #d9e1ea;
-  margin: 0 auto 36px;
-}
-
-.phone h2 {
-  color: var(--navy);
-  font-size: 1.5rem;
-}
-
-.language-card {
-  background: var(--soft-blue);
-  padding: 18px;
-  border-radius: 18px;
-  margin: 14px 0;
-  font-weight: 700;
-  color: var(--navy);
+.phone-frame img {
+  width: 100%;
+  display: block;
+  border-radius: 30px;
 }
 
 .features {
