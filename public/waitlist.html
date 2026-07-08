@@ -34,9 +34,8 @@
 
     <section class="waitlist-form-card">
       <form
+        id="waitlistForm"
         class="custom-waitlist-form"
-        action="https://script.google.com/macros/s/AKfycby1G1Vr0cmwVo3fpf6fe5oecnYZc-heazz4dd0fMhdeknbTluNFdTs_wkMWsveo1Bkb/exec"
-        method="POST"
       >
         <label>
           First Name
@@ -66,6 +65,14 @@
           We’ll only email you about TravelLingo updates and launch news.
         </p>
       </form>
+
+      <div id="successMessage" class="success-message" hidden>
+        <h2>You’re on the list!</h2>
+        <p>
+          Thanks for joining the TravelLingo waitlist. We’ll let you know when the app is ready.
+        </p>
+        <a class="button" href="index.html">Back to Home</a>
+      </div>
     </section>
   </main>
 
@@ -73,5 +80,35 @@
     <p>© 2026 TravelLingo. All rights reserved.</p>
     <p><a href="index.html">Back to Home</a></p>
   </footer>
+
+  <script>
+    const form = document.getElementById("waitlistForm");
+    const successMessage = document.getElementById("successMessage");
+
+    form.addEventListener("submit", async function (event) {
+      event.preventDefault();
+
+      const submitButton = form.querySelector("button");
+      submitButton.disabled = true;
+      submitButton.textContent = "Joining...";
+
+      const formData = new FormData(form);
+
+      try {
+        await fetch("https://script.google.com/macros/s/AKfycby1G1Vr0cmwVo3fpf6fe5oecnYZc-heazz4dd0fMhdeknbTluNFdTs_wkMWsveo1Bkb/exec", {
+          method: "POST",
+          body: formData,
+          mode: "no-cors"
+        });
+
+        form.hidden = true;
+        successMessage.hidden = false;
+      } catch (error) {
+        submitButton.disabled = false;
+        submitButton.textContent = "Join the Waitlist";
+        alert("Something went wrong. Please try again.");
+      }
+    });
+  </script>
 </body>
 </html>
