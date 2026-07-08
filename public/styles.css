@@ -199,19 +199,56 @@ footer a {
   .phone-frame {
     width: min(300px, 100%);
 
-.custom-waitlist-form {
-  max-width: 560px;
-  margin: 32px auto 0;
+.header-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.waitlist-page {
+  padding: 32px 7% 80px;
+}
+
+.waitlist-intro {
+  max-width: 780px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.waitlist-intro h1 {
+  font-size: clamp(2.5rem, 7vw, 4.75rem);
+  line-height: 0.98;
+  margin: 0 0 22px;
+  color: var(--navy);
+  font-weight: 800;
+  letter-spacing: -0.055em;
+}
+
+.waitlist-intro p {
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 1.12rem;
+  color: var(--text);
+}
+
+.waitlist-form-card {
+  max-width: 620px;
+  margin: 0 auto;
   background: white;
-  padding: 32px;
-  border-radius: 28px;
-  box-shadow: 0 10px 30px rgba(16, 36, 63, 0.07);
+  padding: 36px;
+  border-radius: 32px;
+  box-shadow: 0 20px 60px rgba(16, 36, 63, 0.12);
+}
+
+.custom-waitlist-form {
+  margin: 0;
   text-align: left;
 }
 
 .custom-waitlist-form label {
   display: block;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   color: var(--navy);
   font-weight: 700;
 }
@@ -220,13 +257,36 @@ footer a {
 .custom-waitlist-form select {
   width: 100%;
   margin-top: 8px;
-  padding: 14px 16px;
+  padding: 15px 16px;
   border: 1px solid #d9e1ea;
-  border-radius: 14px;
+  border-radius: 16px;
+  background: #fbfcfd;
+  color: var(--text);
   font: inherit;
 }
 
-.custom-waitlist-form button {
+.custom-waitlist-form input:focus,
+.custom-waitlist-form select:focus {
+  outline: 2px solid rgba(244, 123, 63, 0.28);
+  border-color: var(--orange);
+}
+
+.form-button {
+  width: 100%;
   border: 0;
   cursor: pointer;
+  font-size: 1rem;
+}
+
+.form-note {
+  margin: 18px 0 0;
+  text-align: center;
+  font-size: 0.92rem;
+  color: #667;
+}
+
+@media (max-width: 650px) {
+  .waitlist-form-card {
+    padding: 26px;
+  }
 }
