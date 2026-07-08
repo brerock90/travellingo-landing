@@ -1,0 +1,181 @@
+:root {
+  --navy: #10243f;
+  --orange: #f47b3f;
+  --cream: #fff8ef;
+  --soft-blue: #eaf1f7;
+  --text: #28384d;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 7%;
+}
+
+.logo-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--orange) 0 50%, var(--navy) 50% 100%);
+  color: white;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+
+.brand-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+  padding: 56px 7% 72px;
+}
+
+.eyebrow {
+  color: var(--orange);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 0.95;
+  margin: 0 0 24px;
+  color: var(--navy);
+}
+
+.hero-copy {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  max-width: 620px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 18px;
+  background: var(--orange);
+  color: white;
+  padding: 15px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 12px 24px rgba(244, 123, 63, 0.25);
+}
+
+.phone-card {
+  display: flex;
+  justify-content: center;
+}
+
+.phone {
+  width: min(320px, 100%);
+  min-height: 560px;
+  background: var(--white);
+  border: 12px solid var(--navy);
+  border-radius: 42px;
+  padding: 28px 22px;
+  box-shadow: 0 24px 70px rgba(16, 36, 63, 0.18);
+}
+
+.phone-top {
+  width: 90px;
+  height: 8px;
+  border-radius: 999px;
+  background: #d9e1ea;
+  margin: 0 auto 36px;
+}
+
+.phone h2 {
+  color: var(--navy);
+  font-size: 1.5rem;
+}
+
+.language-card {
+  background: var(--soft-blue);
+  padding: 18px;
+  border-radius: 18px;
+  margin: 14px 0;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 32px 7% 72px;
+}
+
+.features div,
+.positioning,
+.waitlist {
+  background: white;
+  border-radius: 28px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(16, 36, 63, 0.07);
+}
+
+.features h3,
+.positioning h2,
+.waitlist h2 {
+  color: var(--navy);
+  margin-top: 0;
+}
+
+.positioning,
+.waitlist {
+  margin: 0 7% 32px;
+  text-align: center;
+}
+
+.positioning p,
+.waitlist p {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+footer {
+  padding: 36px 7%;
+  text-align: center;
+  color: #667;
+}
+
+footer a {
+  color: var(--navy);
+}
+
+@media (max-width: 850px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 24px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .phone {
+    min-height: 480px;
+  }
+}
