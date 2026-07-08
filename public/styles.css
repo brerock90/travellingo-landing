@@ -222,8 +222,8 @@ p {
   width: 100%;
   margin-bottom: 0;
   color: var(--navy);
-  font-weight: 700;
-  font-size: 0.92rem;
+  font-weight: 650;
+  font-size: 0.81rem;
 }
 
 .custom-waitlist-form input,
