@@ -5,11 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Join the TravelLingo Waitlist</title>
-  <meta name="description" content="Join the TravelLingo waitlist and be notified when the travel phrase app launches." />
+  <meta
+    name="description"
+    content="Join the TravelLingo waitlist and be notified when the travel phrase app launches."
+  />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -17,7 +23,11 @@
 <body>
   <header class="site-header">
     <a class="header-link" href="index.html">
-      <img class="logo-img" src="assets/applogo.png" alt="TravelLingo logo" />
+      <img
+        class="logo-img"
+        src="assets/applogo.png"
+        alt="TravelLingo logo"
+      />
       <span class="brand-name">TravelLingo</span>
     </a>
   </header>
@@ -25,7 +35,9 @@
   <main class="waitlist-page">
     <section class="waitlist-intro">
       <p class="eyebrow">Join the waitlist</p>
+
       <h1>Be the first to know when TravelLingo launches.</h1>
+
       <p>
         Get launch updates for TravelLingo, a beginner-friendly app for learning
         practical Spanish, French, Italian, and German travel phrases.
@@ -39,12 +51,22 @@
       >
         <label>
           First Name
-          <input type="text" name="firstName" placeholder="Your first name" required />
+          <input
+            type="text"
+            name="firstName"
+            placeholder="Your first name"
+            required
+          />
         </label>
 
         <label>
           Email Address
-          <input type="email" name="email" placeholder="you@example.com" required />
+          <input
+            type="email"
+            name="email"
+            placeholder="you@example.com"
+            required
+          />
         </label>
 
         <label>
@@ -59,7 +81,41 @@
           </select>
         </label>
 
-        <button class="button form-button" type="submit">Join the Waitlist</button>
+        <fieldset class="app-store-options">
+          <legend>Which app store do you use?</legend>
+
+          <label class="radio-option">
+            <input
+              type="radio"
+              name="appStore"
+              value="App Store"
+              required
+            />
+            <span>App Store (iPhone/iPad)</span>
+          </label>
+
+          <label class="radio-option">
+            <input
+              type="radio"
+              name="appStore"
+              value="Google Play"
+            />
+            <span>Google Play</span>
+          </label>
+
+          <label class="radio-option">
+            <input
+              type="radio"
+              name="appStore"
+              value="Both"
+            />
+            <span>Both</span>
+          </label>
+        </fieldset>
+
+        <button class="button form-button" type="submit">
+          Join the Waitlist
+        </button>
 
         <p class="form-note">
           We’ll only email you about TravelLingo updates and launch news.
@@ -68,9 +124,12 @@
 
       <div id="successMessage" class="success-message" hidden>
         <h2>You’re on the list!</h2>
+
         <p>
-          Thanks for joining the TravelLingo waitlist. We’ll let you know when the app is ready.
+          Thanks for joining the TravelLingo waitlist. We’ll let you know when
+          the app is ready.
         </p>
+
         <a class="button" href="index.html">Back to Home</a>
       </div>
     </section>
@@ -95,11 +154,14 @@
       const formData = new FormData(form);
 
       try {
-        await fetch("https://script.google.com/macros/s/AKfycby1G1Vr0cmwVo3fpf6fe5oecnYZc-heazz4dd0fMhdeknbTluNFdTs_wkMWsveo1Bkb/exec", {
-          method: "POST",
-          body: formData,
-          mode: "no-cors"
-        });
+        await fetch(
+          "https://script.google.com/macros/s/AKfycby1G1Vr0cmwVo3fpf6fe5oecnYZc-heazz4dd0fMhdeknbTluNFdTs_wkMWsveo1Bkb/exec",
+          {
+            method: "POST",
+            body: formData,
+            mode: "no-cors"
+          }
+        );
 
         form.hidden = true;
         successMessage.hidden = false;
