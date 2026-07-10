@@ -1,362 +1,104 @@
-/* ------------------------------
-   TravelLingo Waitlist Page
------------------------------- */
-
+@@ -1,102 +1,102 @@
 :root {
-  --navy: #263e5e;
-  --deep-navy: #0d1b3d;
-  --orange: #f28c28;
-
-  --page-background: #f8f6f3;
-  --form-card-blue: #e3eef9;
+  --navy: #10243f;
+  --orange: #f47b3f;
+  --cream: #fff8ef;
+  --soft-blue: #eaf1f7;
+  --text: #28384d;
   --white: #ffffff;
-
-  --text: #263e5e;
-  --muted-text: #51698b;
-  --border: #c8d7e6;
-
-  --shadow: 0 14px 36px rgba(38, 62, 94, 0.12);
 }
-
-/* ------------------------------
-   Base styles
------------------------------- */
 
 * {
   box-sizing: border-box;
 }
 
-html {
-  min-height: 100%;
-}
-
 body {
-  min-height: 100vh;
   margin: 0;
-  background: var(--page-background);
+  font-family: 'Inter', Arial, sans-serif;
+  background: var(--cream);
   color: var(--text);
-  font-family: "Inter", Arial, sans-serif;
-  line-height: 1.6;
+  font-weight: 400;
 }
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-a {
-  color: inherit;
-}
-
-/* ------------------------------
-   Header
------------------------------- */
 
 .site-header {
-  width: 100%;
-  padding: 24px 32px;
-}
-
-.header-link {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 12px;
-  color: var(--deep-navy);
+  padding: 24px 7%;
+  white-space: nowrap;
+}
+
+.header-link,
+.header-link:visited,
+.header-link:hover,
+.header-link:active {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   text-decoration: none;
+  color: var(--navy);
 }
 
 .logo-img {
-  width: 42px;
-  height: 42px;
+  width: 48px;
+  height: 48px;
   object-fit: contain;
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .brand-name {
-  font-size: 1.35rem;
-  font-weight: 800;
+  font-size: 1.25rem;
+  font-weight: 750;
   letter-spacing: -0.03em;
-}
-
-/* ------------------------------
-   Main page layout
------------------------------- */
-
-.waitlist-page {
-  width: min(100% - 32px, 720px);
-  margin: 24px auto 64px;
-}
-
-.waitlist-intro {
-  margin: 0 auto 28px;
-  text-align: center;
-}
-
-.waitlist-intro .eyebrow {
-  margin: 0 0 10px;
-  color: var(--orange);
-  font-size: 0.85rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.waitlist-intro h1 {
-  max-width: 680px;
-  margin: 0 auto 16px;
-  color: var(--deep-navy);
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 800;
-  letter-spacing: -0.045em;
-  line-height: 1.12;
-}
-
-.waitlist-intro p {
-  max-width: 610px;
-  margin: 0 auto;
-  color: var(--muted-text);
-  font-size: 1rem;
-}
-
-/* ------------------------------
-   Blue form card
------------------------------- */
-
-.waitlist-form-card {
-  max-width: 400px;
-  margin: 0 auto;
-  background: #e3edf8;
-  padding: 26px;
-  border-radius: 26px;
-  box-shadow: 0 16px 42px rgba(16, 36, 63, 0.1);
-
-/* ------------------------------
-   Form layout
------------------------------- */
-
-.custom-waitlist-form {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin: 0;
-  text-align: left;
-  width: 100%;
-
-.custom-waitlist-form label {
-  display: block;
-  width: 100%;
-  margin-bottom: 0;
   color: var(--navy);
-  font-weight: 650;
-  font-size: 0.81rem;
 }
 
-
-.custom-waitlist-form input,
-.custom-waitlist-form select {
-  display: block;
-  width: 100%;
-  margin-top: 7px;
-  height: 43px;
-  padding: 12px 14px;
-  border: 1px solid #d7dee8;
-  border-radius: 13px;
-  background: #fbfcfd;
-  color: var(--text);
-  font: inherit;
-  font-size: 0.81rem;
-  box-shadow: inset 0 1px 2px rgba(16, 36, 63, 0.04);
-}
-.custom-waitlist-form input::placeholder {
-  color: #8796a8;
-}
-
-.custom-waitlist-form input:hover,
-.custom-waitlist-form select:hover {
-  border-color: #9fb5ca;
-}
-
-.custom-waitlist-form input:focus,
-.custom-waitlist-form select:focus {
-  outline: 3px solid rgba(244, 123, 63, 0.22);
-  border-color: var(--orange);
-  background: #ffffff;
-}
-
-.custom-waitlist-form select {
-  cursor: pointer;
-}
-
-/* ------------------------------
-   Buttons
------------------------------- */
-
-.button {
-  display: inline-flex;
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
   align-items: center;
-  justify-content: center;
-  min-height: 52px;
-  padding: 14px 24px;
-  border: 0;
-  border-radius: 12px;
-  background: var(--orange);
-  color: var(--white);
-  font-family: inherit;
-  font-size: 1rem;
+  padding: 56px 7% 72px;
+  overflow: hidden;
+}
+
+.eyebrow {
+  color: var(--orange);
   font-weight: 700;
-  line-height: 1.2;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  box-shadow: 0 6px 16px rgba(242, 140, 40, 0.22);
-  transition:
-    transform 0.2s ease,
-    background-color 0.2s ease,
-    box-shadow 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
 }
 
-.button:hover {
-  background: #df7920;
-  box-shadow: 0 8px 20px rgba(242, 140, 40, 0.28);
-  transform: translateY(-1px);
-}
-
-.button:focus-visible {
-  outline: 3px solid rgba(242, 140, 40, 0.35);
-  outline-offset: 3px;
-}
-
-.button:active {
-  transform: translateY(0);
-}
-
-.button:disabled {
-  cursor: not-allowed;
-  opacity: 0.65;
-  transform: none;
-}
-
-.form-button {
-  width: 100%;
-  margin-top: 4px;
-}
-
-/* ------------------------------
-   Form note
------------------------------- */
-
-.form-note {
-  margin: -4px 0 0;
-  color: var(--muted-text);
-  font-size: 0.85rem;
-  line-height: 1.5;
-  text-align: center;
-}
-
-/* ------------------------------
-   Success message
------------------------------- */
-
-.success-message {
-  padding: 12px 4px;
-  text-align: center;
-}
-
-.success-message h2 {
-  margin: 0 0 12px;
-  color: var(--deep-navy);
-  font-size: 2rem;
+h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 0.95;
+  margin: 0 0 24px;
+  color: var(--navy);
   font-weight: 800;
+  letter-spacing: -0.055em;
+}
+
+h2 {
+  color: var(--navy);
+  font-weight: 750;
   letter-spacing: -0.035em;
 }
 
-.success-message p {
-  max-width: 480px;
-  margin: 0 auto 24px;
-  color: var(--muted-text);
-}
-
-.success-message .button {
-  min-width: 180px;
-}
-
-[hidden] {
-  display: none !important;
-}
-
-/* ------------------------------
-   Footer
------------------------------- */
-
-footer {
-  width: min(100% - 32px, 720px);
-  margin: 0 auto;
-  padding: 0 0 32px;
-  color: var(--muted-text);
-  font-size: 0.85rem;
-  text-align: center;
-}
-
-footer p {
-  margin: 4px 0;
-}
-
-footer a {
+h3 {
   color: var(--navy);
-  font-weight: 600;
-  text-decoration: none;
+  font-weight: 750;
+  letter-spacing: -0.03em;
 }
 
-footer a:hover {
-  color: var(--orange);
-  text-decoration: underline;
+p {
+  font-weight: 400;
+  line-height: 1.65;
 }
 
-/* ------------------------------
-   Mobile styles
------------------------------- */
-
-@media (max-width: 640px) {
-  .site-header {
-    padding: 20px;
-  }
-
-  .logo-img {
-    width: 38px;
-    height: 38px;
-  }
-
-  .brand-name {
-    font-size: 1.2rem;
-  }
-
-  .waitlist-page {
-    width: min(100% - 24px, 720px);
-    margin-top: 10px;
-    margin-bottom: 40px;
-  }
-
-  .waitlist-intro {
-    margin-bottom: 22px;
-  }
-
-  .waitlist-intro h1 {
-    font-size: 2rem;
-  }
-
-  .waitlist-intro p {
-    font-size: 0.95rem;
-  }
-
-  .waitlist-form-card {
-    padding: 26px 20px;
-    border-radius: 20px;
-  }
-
-  .custom-waitlist-form {
-    gap: 19px;
-  }
-
-  footer {
-    width: min(100% - 24px, 720px);
-  }
+.hero-copy {
+  font-size: 1.0rem;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  max-width: 620px;
 }
