@@ -44,83 +44,60 @@
       </p>
     </section>
 
-    <section class="waitlist-form-card">
-      <form
-        id="waitlistForm"
-        class="custom-waitlist-form"
-      >
-        <label>
-          First Name
-          <input
-            type="text"
-            name="firstName"
-            placeholder="Your first name"
-            required
-          />
-        </label>
+ <form
+  id="waitlistForm"
+  class="custom-waitlist-form"
+>
+  <label>
+    First Name
+    <input
+      type="text"
+      name="firstName"
+      placeholder="Your first name"
+      required
+    />
+  </label>
 
-        <label>
-          Email Address
-          <input
-            type="email"
-            name="email"
-            placeholder="you@example.com"
-            required
-          />
-        </label>
+  <label>
+    Email Address
+    <input
+      type="email"
+      name="email"
+      placeholder="you@example.com"
+      required
+    />
+  </label>
 
-        <label>
-          Which language are you most interested in?
-          <select name="language" required>
-            <option value="">Choose one</option>
-            <option value="Spanish">Spanish</option>
-            <option value="French">French</option>
-            <option value="Italian">Italian</option>
-            <option value="German">German</option>
-            <option value="Not sure yet">Not sure yet</option>
-          </select>
-        </label>
+  <label>
+    Which app store do you use?
+    <select name="appStore" required>
+      <option value="">Choose one</option>
+      <option value="App Store">App Store (iPhone/iPad)</option>
+      <option value="Google Play">Google Play</option>
+      <option value="Both">Both</option>
+    </select>
+  </label>
 
-        <fieldset class="app-store-options">
-          <legend>Which app store do you use?</legend>
+  <label>
+    Which language are you most interested in?
+    <select name="language" required>
+      <option value="">Choose one</option>
+      <option value="Spanish">Spanish</option>
+      <option value="French">French</option>
+      <option value="Italian">Italian</option>
+      <option value="German">German</option>
+      <option value="Not sure yet">Not sure yet</option>
+    </select>
+  </label>
 
-          <label class="radio-option">
-            <input
-              type="radio"
-              name="appStore"
-              value="App Store"
-              required
-            />
-            <span>App Store (iPhone/iPad)</span>
-          </label>
+  <button class="button form-button" type="submit">
+    Join the Waitlist
+  </button>
 
-          <label class="radio-option">
-            <input
-              type="radio"
-              name="appStore"
-              value="Google Play"
-            />
-            <span>Google Play</span>
-          </label>
-
-          <label class="radio-option">
-            <input
-              type="radio"
-              name="appStore"
-              value="Both"
-            />
-            <span>Both</span>
-          </label>
-        </fieldset>
-
-        <button class="button form-button" type="submit">
-          Join the Waitlist
-        </button>
-
-        <p class="form-note">
-          We’ll only email you about TravelLingo updates and launch news.
-        </p>
-      </form>
+  <p class="form-note">
+    We’ll only email you about TravelLingo updates and launch news.
+  </p>
+</form>
 
       <div id="successMessage" class="success-message" hidden>
         <h2>You’re on the list!</h2>
