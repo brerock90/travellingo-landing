@@ -36,12 +36,32 @@
       <form
         id="waitlistForm"
         class="custom-waitlist-form"
-        action="https://script.google.com/macros/s/AKfycby1G1Vr0cmwVo3fpf6fe5oecnYZc-heazz4dd0fMhdeknbTluNFdTs_wkMWsveo1Bkb/exec"
-        method="POST"
       >
         <label>
           First Name
-@@ -66,12 +65,50 @@
+          <input type="text" name="firstName" placeholder="Your first name" required />
+        </label>
+
+        <label>
+          Email Address
+          <input type="email" name="email" placeholder="you@example.com" required />
+        </label>
+
+        <label>
+          Which language are you most interested in?
+          <select name="language" required>
+            <option value="">Choose one</option>
+            <option value="Spanish">Spanish</option>
+            <option value="French">French</option>
+            <option value="Italian">Italian</option>
+            <option value="German">German</option>
+            <option value="Not sure yet">Not sure yet</option>
+          </select>
+        </label>
+
+        <button class="button form-button" type="submit">Join the Waitlist</button>
+
+        <p class="form-note">
           We’ll only email you about TravelLingo updates and launch news.
         </p>
       </form>
