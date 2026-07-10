@@ -317,6 +317,9 @@ footer a {
   margin-top: 0;
   color: var(--navy);
 }
+[hidden] {
+  display: none !important;
+}
 
 .success-message p {
   margin: 0 auto 18px;
