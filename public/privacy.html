@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Privacy Policy | TravelLingo</title>
+
+  <meta
+    name="description"
+    content="Read the TravelLingo Privacy Policy and learn how the app handles analytics, speech recognition, local progress, and other information."
+  />
+
+  <link rel="icon" href="assets/applogo.png" type="image/png" />
+
+  <!-- Matches the Inter typography used by the TravelLingo website and app. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --navy: #10243f;
+      --navy-light: #28384d;
+      --muted-text: #51698b;
+      --orange: #f47b3f;
+      --cream: #fff8ef;
+      --soft-blue: #eaf1f7;
+      --white: #ffffff;
+      --border: rgba(16, 36, 63, 0.12);
+      --shadow: 0 18px 45px rgba(16, 36, 63, 0.08);
+      --max-width: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--navy-light);
+      font-family: "Inter", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--navy);
+      text-decoration-color: var(--orange);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+
+    a:hover,
+    a:focus-visible {
+      color: var(--orange);
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 248, 239, 0.96);
+    }
+
+    .header-inner {
+      width: min(calc(100% - 40px), var(--max-width));
+      min-height: 86px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--navy);
+      text-decoration: none;
+    }
+
+    .brand-logo {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+    }
+
+    .brand-name {
+      color: #111111;
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .home-link {
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    main {
+      width: min(calc(100% - 40px), 900px);
+      margin: 0 auto;
+      padding: 72px 0 88px;
+    }
+
+    .page-intro {
+      max-width: 760px;
+      margin-bottom: 36px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin: 0 0 14px;
+      color: var(--orange);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: var(--navy);
+      line-height: 1.22;
+      letter-spacing: -0.03em;
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      font-size: clamp(2.25rem, 6vw, 4rem);
+      font-weight: 800;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: clamp(1.35rem, 3vw, 1.7rem);
+      font-weight: 750;
+    }
+
+    h3 {
+      margin: 24px 0 8px;
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    p {
+      margin: 0 0 16px;
+    }
+
+    ul {
+      margin: 0 0 18px;
+      padding-left: 1.4rem;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .intro-copy {
+      max-width: 700px;
+      margin-bottom: 12px;
+      color: var(--muted-text);
+      font-size: 1.08rem;
+    }
+
+    .updated-date {
+      color: var(--muted-text);
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+
+    .policy-card {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .policy-section {
+      padding: 34px 40px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .policy-section:last-child {
+      border-bottom: 0;
+    }
+
+    .policy-section:nth-child(even) {
+      background: rgba(234, 241, 247, 0.42);
+    }
+
+    .summary-box {
+      margin-top: 20px;
+      padding: 22px 24px;
+      border-left: 4px solid var(--orange);
+      border-radius: 0 16px 16px 0;
+      background: var(--soft-blue);
+    }
+
+    .summary-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact-card {
+      padding: 24px;
+      border-radius: 18px;
+      background: var(--soft-blue);
+    }
+
+    .contact-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--border);
+      background: var(--cream);
+    }
+
+    .footer-inner {
+      width: min(calc(100% - 40px), var(--max-width));
+      min-height: 100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      color: var(--muted-text);
+      font-size: 0.9rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .footer-links a {
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        min-height: 76px;
+      }
+
+      .brand-logo {
+        width: 42px;
+        height: 42px;
+      }
+
+      main {
+        padding: 52px 0 64px;
+      }
+
+      .policy-card {
+        border-radius: 22px;
+      }
+
+      .policy-section {
+        padding: 28px 24px;
+      }
+
+      .footer-inner {
+        padding: 26px 0;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand-link" href="/" aria-label="TravelLingo home">
+        <img
+          class="brand-logo"
+          src="assets/applogo.png"
+          alt="TravelLingo compass logo"
+        />
+        <span class="brand-name">TravelLingo</span>
+      </a>
+
+      <a class="home-link" href="/">Back to home</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <p class="eyebrow">TravelLingo Legal</p>
+
+      <h1>Privacy Policy</h1>
+
+      <p class="intro-copy">
+        TravelLingo is designed to help beginner travelers learn practical
+        phrases with confidence. This policy explains what information the app
+        uses, why it is used, and the choices available to you.
+      </p>
+
+      <p class="updated-date">
+        Last updated: July 13, 2026
+      </p>
+    </section>
+
+    <article class="policy-card">
+      <section class="policy-section">
+        <h2>1. Overview</h2>
+
+        <p>
+          This Privacy Policy applies to the TravelLingo mobile application and
+          the TravelLingo website.
+        </p>
+
+        <p>
+          TravelLingo does not currently require you to create an account,
+          provide your name, or submit an email address to use the mobile app.
+        </p>
+
+        <div class="summary-box">
+          <p>
+            <strong>In summary:</strong> TravelLingo stores app progress and
+            settings locally on your device and uses limited, privacy-conscious
+            analytics to understand how the app is used and improve its
+            reliability.
+          </p>
+        </div>
+      </section>
+
+      <section class="policy-section">
+        <h2>2. Information stored on your device</h2>
+
+        <p>
+          TravelLingo may store the following information locally on your
+          device:
+        </p>
+
+        <ul>
+          <li>Your selected language and app preferences</li>
+          <li>Lesson and practice progress</li>
+          <li>Completion history and related progress information</li>
+          <li>Settings needed for the app to function</li>
+        </ul>
+
+        <p>
+          This information is used to provide the app’s core features. It is not
+          currently connected to a TravelLingo user account or synchronized
+          across devices.
+        </p>
+
+        <p>
+          Removing the app or clearing its storage may remove this locally
+          stored information.
+        </p>
+      </section>
+
+      <section class="policy-section">
+        <h2>3. Analytics information</h2>
+
+        <p>
+          TravelLingo uses PostHog to collect limited analytics about app usage.
+          This helps us understand which features are useful, identify technical
+          problems, and improve the app.
+        </p>
+
+        <p>Analytics information may include:</p>
+
+        <ul>
+          <li>The app version and device platform</li>
+          <li>Which app tabs or general features are opened</li>
+          <li>The selected learning language</li>
+          <li>Lesson or practice category identifiers</li>
+          <li>The type of practice activity started or completed</li>
+          <li>Whether an activity was completed</li>
+          <li>Counts such as the number of search results</li>
+          <li>
+            Whether speech recognition returned a result, without including
+            what was spoken
+          </li>
+        </ul>
+
+        <p>
+          TravelLingo does not intentionally send your spoken transcript,
+          phrase text, translation text, dictionary search text, audio
+          recordings, name, email address, or precise location to PostHog.
+        </p>
+
+        <p>
+          Analytics identifiers may be generated automatically by the analytics
+          provider to distinguish app installations or sessions. We use this
+          information for product analytics and app improvement, not for
+          advertising.
+        </p>
+      </section>
+
+      <section class="policy-section">
+        <h2>4. Speech recognition and microphone access</h2>
+
+        <p>
+          TravelLingo includes speaking-practice features that use your device’s
+          microphone and speech-recognition services.
+        </p>
+
+        <p>
+          Microphone access is used only when you choose to use a speaking
+          activity. The app may display the words recognized by your device so
+          you can compare what was heard with the practice phrase.
+        </p>
+
+        <p>
+          TravelLingo does not intentionally record, store, or send your voice
+          audio or spoken transcript to TravelLingo analytics.
+        </p>
+
+        <p>
+          Speech recognition may be processed by services provided by your
+          device manufacturer or operating-system provider. Their handling of
+          speech data is governed by their own privacy policies and device
+          settings.
+        </p>
+
+        <p>
+          You may deny or revoke microphone permission through your device
+          settings. Speaking-practice features may not work without that
+          permission, but the rest of the app will remain available.
+        </p>
+      </section>
+
+      <section class="policy-section">
+        <h2>5. Phrase audio</h2>
+
+        <p>
+          TravelLingo uses generated audio files to provide phrase
+          pronunciation. Listening to phrase audio does not require TravelLingo
+          to record your voice.
+        </p>
+
+        <p>
+          The pronunciation audio is included as part of the app’s learning
+          content and is separate from microphone-based speaking practice.
+        </p>
+      </section>
+
+      <section class="policy-section">
+        <h2>6. Website and waitlist information</h2>
+
+        <p>
+          The TravelLingo website may allow you to voluntarily join a waitlist
+          or contact support.
+        </p>
+
+        <p>
+          When you submit a form or send an email, we may receive information
+          you choose to provide, such as:
+        </p>
+
+        <ul>
+          <li>Your name</li>
+          <li>Your email address</li>
+          <li>Your preferred language</li>
+          <li>Your preferred app store</li>
+          <li>The contents of a support message</li>
+        </ul>
+
+        <p>
+          We use this information to respond to you, manage launch
+          communications, and provide TravelLingo updates. We do not use this
+          information for unrelated advertising.
+        </p>
+
+        <p>
+          You may ask to be removed from the waitlist or request deletion of
+          information you submitted by contacting us.
+        </p>
+      </section>
+
+      <section class="policy-section">
+        <h2>7. Service providers</h2>
+
+        <p>
+          TravelLingo may use service providers to operate the app and website.
+          These may include:
+        </p>
+
+        <ul>
+          <li>
+            <strong>PostHog</strong>, for limited product analytics
+          </li>
+          <li>
+            <strong>Google Play</strong>, for Android app distribution
+          </li>
+          <li>
+            <strong>Apple services</strong>, if TravelLingo is distributed on
+            iOS
+          </li>
+          <li>
+            Website hosting, form-processing, email, and infrastructure
+            providers
+          </li>
+        </ul>
+
+        <p>
+          These providers process information according to their own terms and
+          privacy practices and only as needed to provide their services.
+        </p>
+      </section>
+
+      <section class="policy-section">
+        <h2>8. Data sharing and sale</h2>
+
+        <p>
+          TravelLingo does not sell your personal information.
+        </p>
+
+        <p>
+          We do not share personal information with third parties for
+          cross-context behavioral advertising.
+        </p>
+
+        <p>
+          Information may be disclosed when reasonably necessary to comply with
+          applicable law, respond to valid legal requests, protect the security
+          of TravelLingo, or prevent fraud or misuse.
+        </p>
+      </section>
+
+      <section class="policy-section">
+        <h2>9. Data retention</h2>
+
+        <p>
+          Information stored locally in the app generally remains on your device
+          until you clear the app’s data or uninstall it.
+        </p>
+
+        <p>
+          Analytics information is retained according to TravelLingo’s analytics
+          settings and the policies of the applicable service provider.
+        </p>
+
+        <p>
+          Waitlist and support information may be retained for as long as
+          reasonably necessary to communicate with you, provide support,
+          maintain records, or comply with legal obligations.
+        </p>
+      </section>
+
+      <section class="policy-section">
+        <h2>10. Data security</h2>
+
+        <p>
+          We use reasonable administrative and technical measures intended to
+          protect the information handled by TravelLingo.
+        </p>
+
+        <p>
+          No method of electronic storage or transmission is completely secure,
+          so we cannot guarantee absolute security.
+        </p>
+      </section>
+
+      <section class="policy-section">
+        <h2>11. Children’s privacy</h2>
+
+        <p>
+          TravelLingo is designed as a practical travel-learning tool and is not
+          directed to children under 13.
+        </p>
+
+        <p>
+          We do not knowingly collect personal information directly from
+          children under 13. If you believe a child has provided personal
+          information to TravelLingo, contact us so we can review and address
+          the request.
+        </p>
+      </section>
+
+      <section class="policy-section">
+        <h2>12. Your choices</h2>
+
+        <p>You may:</p>
+
+        <ul>
+          <li>Decline or revoke microphone permission</li>
+          <li>Clear locally stored app data through your device settings</li>
+          <li>Uninstall the app</li>
+          <li>Request removal from the TravelLingo waitlist</li>
+          <li>
+            Contact us with questions or requests regarding information you
+            submitted
+          </li>
+        </ul>
+      </section>
+
+      <section class="policy-section">
+        <h2>13. Changes to this policy</h2>
+
+        <p>
+          We may update this Privacy Policy as TravelLingo changes or as needed
+          to reflect legal, technical, or operational requirements.
+        </p>
+
+        <p>
+          When the policy is updated, the revised version will be posted on this
+          page with a new “Last updated” date.
+        </p>
+      </section>
+
+      <section class="policy-section">
+        <h2>14. Contact us</h2>
+
+        <div class="contact-card">
+          <p>
+            Questions about this Privacy Policy may be sent to:
+          </p>
+
+          <p>
+            <strong>TravelLingo</strong><br />
+            Email:
+            <a href="mailto:support@gotravellingo.com">
+              support@gotravellingo.com
+            </a>
+          </p>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© 2026 TravelLingo. All rights reserved.</span>
+
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="/privacy.html" aria-current="page">Privacy Policy</a>
+        <a href="mailto:support@gotravellingo.com">Support</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
