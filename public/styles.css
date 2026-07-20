@@ -288,63 +288,66 @@ p {
 /* Support Page */
 
 .support-page {
-  padding: 24px 7% 56px;
+  padding: 0 7% 56px;
 }
 
+/* Support introduction styled like the homepage hero */
+
 .support-intro {
-  max-width: 760px;
-  margin: 0 auto 32px;
-  text-align: center;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 56px 0 24px;
+  text-align: left;
+}
+
+.support-intro .eyebrow {
+  margin-top: 0;
+  margin-bottom: 18px;
 }
 
 .support-intro h1 {
-  font-size: clamp(2.4rem, 6vw, 4.5rem);
-  line-height: 0.98;
-  margin: 0 auto 20px;
+  max-width: 760px;
+  margin: 0 0 24px;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 0.95;
   color: var(--navy);
   font-weight: 800;
   letter-spacing: -0.055em;
 }
 
 .support-intro p:last-child {
-  max-width: 650px;
-  margin: 0 auto;
-  font-size: 1rem;
+  max-width: 620px;
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.7;
 }
 
-.support-contact-card,
-.support-section,
-.support-details {
-  max-width: 1080px;
-  margin: 0 auto 32px;
-  background: var(--white);
-  border-radius: 28px;
-  padding: 32px;
-  box-shadow: 0 10px 30px rgba(16, 36, 63, 0.07);
-}
+/* Contact area visually connected to the introduction */
 
 .support-contact-card {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
-  gap: 32px;
-  background: var(--soft-blue);
-}
-
-.support-contact-card h2,
-.support-section-heading h2,
-.support-details h2 {
-  margin: 0 0 10px;
-}
-
-.support-contact-card p,
-.support-section-heading p,
-.support-details p {
-  margin: 0;
+  gap: 36px;
+  max-width: 1080px;
+  margin: 0 auto 64px;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .support-contact-card div {
-  max-width: 700px;
+  max-width: 620px;
+}
+
+.support-contact-card h2 {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+}
+
+.support-contact-card p {
+  margin: 0;
 }
 
 .support-button {
@@ -352,26 +355,48 @@ p {
   margin-top: 0;
 }
 
+/* Common questions */
+
+.support-section {
+  max-width: 1080px;
+  margin: 0 auto 64px;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
 .support-section-heading {
-  margin-bottom: 24px;
+  max-width: 700px;
+  margin: 0 auto 30px;
   text-align: center;
+}
+
+.support-section-heading h2 {
+  margin: 0 0 10px;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+}
+
+.support-section-heading p {
+  margin: 0;
 }
 
 .faq-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
 }
 
 .faq-card {
-  padding: 24px;
-  border-radius: 20px;
-  background: var(--cream);
-  border: 1px solid rgba(16, 36, 63, 0.06);
+  padding: 32px;
+  background: var(--white);
+  border: 0;
+  border-radius: 28px;
+  box-shadow: 0 10px 30px rgba(16, 36, 63, 0.07);
 }
 
 .faq-card h3 {
-  margin: 0 0 10px;
+  margin: 0 0 12px;
 }
 
 .faq-card p {
@@ -380,30 +405,42 @@ p {
 
 .text-link {
   display: inline-block;
-  margin-top: 12px;
+  margin-top: 14px;
   color: var(--navy);
   font-weight: 700;
 }
 
-.troubleshooting {
-  background: var(--soft-blue);
+/* Troubleshooting styled like the homepage positioning section */
+
+.support-section.troubleshooting {
+  max-width: none;
+  margin: 0 0 32px;
+  padding: 32px;
+  background: var(--white);
+  border-radius: 28px;
+  box-shadow: 0 10px 30px rgba(16, 36, 63, 0.07);
+}
+
+.troubleshooting .support-section-heading {
+  margin-bottom: 26px;
 }
 
 .support-steps {
   display: grid;
-  gap: 14px;
-  margin: 0;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
 }
 
 .support-steps li {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-  padding: 20px;
-  background: var(--white);
-  border-radius: 18px;
+  display: block;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  text-align: center;
 }
 
 .support-steps li > span {
@@ -411,7 +448,7 @@ p {
   place-items: center;
   width: 38px;
   height: 38px;
-  flex: 0 0 38px;
+  margin: 0 auto 14px;
   border-radius: 50%;
   background: var(--orange);
   color: var(--white);
@@ -419,21 +456,39 @@ p {
 }
 
 .support-steps h3 {
-  margin: 2px 0 4px;
+  margin: 0 0 8px;
+  font-size: 1rem;
 }
 
 .support-steps p {
   margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
 }
 
+/* Final contact section styled like the homepage waitlist card */
+
 .support-details {
+  max-width: none;
+  margin: 0 0 32px;
+  padding: 32px;
+  background: var(--white);
+  border-radius: 28px;
   text-align: center;
+  box-shadow: 0 10px 30px rgba(16, 36, 63, 0.07);
+}
+
+.support-details h2 {
+  margin: 0 0 10px;
 }
 
 .support-details p {
-  max-width: 720px;
+  max-width: 700px;
   margin: 0 auto;
+  line-height: 1.7;
 }
+
+/* Footer */
 
 footer {
   padding: 36px 7%;
@@ -445,11 +500,22 @@ footer a {
   color: var(--navy);
 }
 
-footer p:last-child {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 18px;
+/* Responsive styles */
+
+@media (max-width: 1000px) {
+  .faq-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .support-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .support-steps li:last-child {
+    grid-column: 1 / -1;
+    max-width: 360px;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 850px) {
@@ -469,20 +535,21 @@ footer p:last-child {
   .phone-frame {
     width: min(300px, 100%);
   }
-}
 
-@media (max-width: 750px) {
+  .support-intro {
+    padding-top: 24px;
+  }
+
+  .support-intro h1 {
+    font-size: clamp(2.6rem, 12vw, 4rem);
+  }
+
   .support-contact-card {
     display: block;
-    text-align: center;
   }
 
   .support-button {
     margin-top: 20px;
-  }
-
-  .faq-grid {
-    grid-template-columns: 1fr;
   }
 }
 
@@ -494,21 +561,40 @@ footer p:last-child {
   .waitlist-intro h1 {
     font-size: clamp(2rem, 10vw, 3rem);
   }
-}
 
-@media (max-width: 520px) {
   .support-page {
-    padding-top: 12px;
+    padding-bottom: 40px;
   }
 
-  .support-contact-card,
-  .support-section,
+  .support-intro {
+    padding-top: 20px;
+  }
+
+  .support-contact-card {
+    margin-bottom: 48px;
+  }
+
+  .support-section {
+    margin-bottom: 48px;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-card,
+  .support-section.troubleshooting,
   .support-details {
-    padding: 24px;
-    border-radius: 24px;
+    padding: 28px;
   }
 
-  .faq-card {
-    padding: 20px;
+  .support-steps {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .support-steps li:last-child {
+    grid-column: auto;
+    max-width: none;
   }
 }
