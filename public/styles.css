@@ -129,7 +129,7 @@ p {
 }
 
 .store-button-secondary {
-  background: var(--navy);
+  background: var(--orange);
   box-shadow: 0 12px 24px rgba(16, 36, 63, 0.2);
 }
 
