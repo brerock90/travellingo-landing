@@ -143,8 +143,7 @@ p {
 }
 
 .download-section h2 {
-  margin-top: 0;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
 }
 
 .download-section p {
@@ -153,16 +152,17 @@ p {
   line-height: 1.7;
 }
 
-.store-buttons-centered {
+.download-section .store-buttons {
   justify-content: center;
   margin-top: 22px;
 }
 
-@media (max-width: 600px) {
-  .store-buttons {
-    align-items: stretch;
-    flex-direction: column;
+@media (max-width: 650px) {
+  .download-section {
+    margin: 0 7% 32px;
+    padding: 28px;
   }
+}
 
   .store-button {
     width: 100%;
