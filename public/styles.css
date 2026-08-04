@@ -114,6 +114,62 @@ p {
   box-shadow: 0 12px 24px rgba(244, 123, 63, 0.25);
 }
 
+/* App Store Download Buttons */
+
+.store-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.store-buttons .button {
+  margin-top: 0;
+}
+
+.store-button-secondary {
+  background: var(--navy);
+  box-shadow: 0 12px 24px rgba(16, 36, 63, 0.2);
+}
+
+.download-section {
+  margin: 0 7% 32px;
+  padding: 32px;
+  background: var(--white);
+  border-radius: 28px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(16, 36, 63, 0.07);
+}
+
+.download-section h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.download-section p {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.store-buttons-centered {
+  justify-content: center;
+  margin-top: 22px;
+}
+
+@media (max-width: 600px) {
+  .store-buttons {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .store-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 .phone-card {
   display: flex;
   justify-content: center;
