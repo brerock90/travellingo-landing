@@ -96,23 +96,60 @@ p {
 }
 
 .hero-copy {
+  max-width: 620px;
   font-size: 0.98rem;
   line-height: 1.7;
-  max-width: 620px;
 }
 
 .button {
   display: inline-block;
   margin-top: 18px;
-  background: var(--orange);
-  color: white;
   padding: 15px 24px;
+  background: var(--orange);
+  color: var(--white);
   border-radius: 999px;
   text-decoration: none;
   font-weight: 700;
   letter-spacing: -0.015em;
   box-shadow: 0 12px 24px rgba(244, 123, 63, 0.25);
 }
+
+/* Official App Store and Google Play badges */
+
+.store-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.store-badge-link {
+  display: inline-block;
+  line-height: 0;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.store-badge-link:focus-visible {
+  outline: 3px solid rgba(244, 123, 63, 0.35);
+  outline-offset: 4px;
+}
+
+.store-badge {
+  display: block;
+  width: auto;
+  height: 54px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.store-buttons-centered {
+  justify-content: center;
+  margin-top: 22px;
+}
+
+/* Phone screenshot */
 
 .phone-card {
   display: flex;
@@ -122,18 +159,20 @@ p {
 
 .phone-frame {
   width: min(320px, 100%);
+  padding: 12px;
   background: var(--navy);
   border-radius: 42px;
-  padding: 12px;
   box-shadow: 0 24px 70px rgba(16, 36, 63, 0.18);
 }
 
 .phone-frame img {
-  width: 100%;
   display: block;
+  width: 100%;
   border-radius: 30px;
   object-fit: cover;
 }
+
+/* Homepage feature cards */
 
 .features {
   display: grid;
@@ -145,9 +184,9 @@ p {
 .features div,
 .positioning,
 .waitlist {
-  background: white;
-  border-radius: 28px;
   padding: 32px;
+  background: var(--white);
+  border-radius: 28px;
   box-shadow: 0 10px 30px rgba(16, 36, 63, 0.07);
 }
 
@@ -170,6 +209,32 @@ p {
   line-height: 1.7;
 }
 
+/* Homepage download section */
+
+.download-section {
+  margin: 0 7% 32px;
+  padding: 32px;
+  background: var(--white);
+  border-radius: 28px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(16, 36, 63, 0.07);
+}
+
+.download-section h2 {
+  margin: 0 0 10px;
+}
+
+.download-section p {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.download-section .store-buttons {
+  justify-content: center;
+  margin-top: 22px;
+}
+
 /* Waitlist Page */
 
 .waitlist-page {
@@ -183,10 +248,10 @@ p {
 }
 
 .waitlist-intro h1 {
+  max-width: 720px;
+  margin: 0 auto 18px;
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1.02;
-  margin: 0 auto 18px;
-  max-width: 720px;
   color: var(--navy);
   font-weight: 800;
   letter-spacing: -0.055em;
@@ -202,8 +267,8 @@ p {
 .waitlist-form-card {
   max-width: 400px;
   margin: 0 auto;
-  background: #e3edf8;
   padding: 26px;
+  background: #e3edf8;
   border-radius: 26px;
   box-shadow: 0 16px 42px rgba(16, 36, 63, 0.1);
 }
@@ -212,9 +277,9 @@ p {
   display: flex;
   flex-direction: column;
   gap: 14px;
+  width: 100%;
   margin: 0;
   text-align: left;
-  width: 100%;
 }
 
 .custom-waitlist-form label {
@@ -230,8 +295,8 @@ p {
 .custom-waitlist-form select {
   display: block;
   width: 100%;
-  margin-top: 7px;
   height: 43px;
+  margin-top: 7px;
   padding: 12px 14px;
   border: 1px solid #d7dee8;
   border-radius: 13px;
@@ -246,18 +311,18 @@ p {
 .custom-waitlist-form select:focus {
   outline: 3px solid rgba(244, 123, 63, 0.22);
   border-color: var(--orange);
-  background: #ffffff;
+  background: var(--white);
 }
 
 .form-button {
   width: 100%;
-  border: 0;
-  cursor: pointer;
-  font-size: 1rem;
   height: 43px;
   margin-top: 4px;
   padding: 13px 20px;
+  border: 0;
   border-radius: 14px;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
 .form-note {
@@ -277,8 +342,8 @@ p {
 }
 
 .success-message p {
-  margin: 0 auto 18px;
   max-width: 420px;
+  margin: 0 auto 18px;
 }
 
 [hidden] {
@@ -290,8 +355,6 @@ p {
 .support-page {
   padding: 0 7% 56px;
 }
-
-/* Support introduction styled like the homepage hero */
 
 .support-intro {
   max-width: 1080px;
@@ -321,8 +384,6 @@ p {
   font-size: 0.98rem;
   line-height: 1.7;
 }
-
-/* Contact area visually connected to the introduction */
 
 .support-contact-card {
   display: flex;
@@ -354,8 +415,6 @@ p {
   flex-shrink: 0;
   margin-top: 0;
 }
-
-/* Common questions */
 
 .support-section {
   max-width: 1080px;
@@ -409,8 +468,6 @@ p {
   color: var(--navy);
   font-weight: 700;
 }
-
-/* Troubleshooting styled like the homepage positioning section */
 
 .support-section.troubleshooting {
   max-width: none;
@@ -466,8 +523,6 @@ p {
   line-height: 1.55;
 }
 
-/* Final contact section styled like the homepage waitlist card */
-
 .support-details {
   max-width: none;
   margin: 0 0 32px;
@@ -498,6 +553,13 @@ footer {
 
 footer a {
   color: var(--navy);
+}
+
+footer p:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
 }
 
 /* Responsive styles */
@@ -554,6 +616,26 @@ footer a {
 }
 
 @media (max-width: 650px) {
+  .store-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .store-buttons-centered,
+  .download-section .store-buttons {
+    align-items: center;
+  }
+
+  .store-badge {
+    height: 50px;
+  }
+
+  .download-section {
+    margin: 0 7% 32px;
+    padding: 28px;
+  }
+
   .waitlist-form-card {
     padding: 24px;
   }
@@ -598,4 +680,3 @@ footer a {
     max-width: none;
   }
 }
-
