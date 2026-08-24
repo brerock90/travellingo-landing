@@ -310,6 +310,10 @@ p {
   box-shadow: 0 10px 30px rgba(16, 36, 63, 0.07);
 }
 
+.guides-preview .guide-card {
+  max-width: 540px;
+}
+
 .guide-card-image {
   display: block;
   width: 100%;
@@ -427,19 +431,19 @@ p {
 }
 
 .article-hero-image {
-  max-width: 1080px;
+  max-width: 800px;
   width: 100%;
-  margin: 28px auto 8px;
+  margin: 24px auto 4px;
   padding: 0;
   overflow: hidden;
-  border-radius: 28px;
-  box-shadow: 0 10px 30px rgba(16, 36, 63, 0.07);
+  border-radius: 24px;
+  box-shadow: 0 8px 24px rgba(16, 36, 63, 0.07);
 }
 
 .article-hero-image img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 7.5;
+  aspect-ratio: 16 / 8;
   object-fit: cover;
   object-position: center 40%;
 }
