@@ -317,8 +317,9 @@ p {
 .guide-card-image {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 2.2 / 1;
   object-fit: cover;
+  object-position: center 58%;
   border-radius: 28px 28px 0 0;
 }
 
@@ -443,9 +444,9 @@ p {
 .article-hero-image img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 8;
+  aspect-ratio: 2.4 / 1;
   object-fit: cover;
-  object-position: center 40%;
+  object-position: center 58%;
 }
 
 .guide-index-grid {
@@ -1029,7 +1030,8 @@ footer p:last-child {
   }
 
   .article-hero-image img {
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 1.8 / 1;
+    object-position: center 58%;
   }
 
   .guide-index-intro h1,
