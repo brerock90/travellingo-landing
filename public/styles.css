@@ -406,6 +406,7 @@ p {
   padding: 48px 28px 36px;
   border-radius: 28px;
   background: var(--soft-blue);
+  text-align: center;
 }
 
 .article-header {
@@ -414,12 +415,25 @@ p {
   padding: 28px 0 24px;
 }
 
-.guide-index-intro .eyebrow,
+.guide-index-intro .eyebrow {
+  display: block;
+  width: 100%;
+  margin: 0 0 18px;
+  text-align: center;
+}
+
 .article-header .eyebrow {
   margin: 0 0 16px;
 }
 
-.guide-index-intro h1,
+.guide-index-intro h1 {
+  max-width: 800px;
+  margin: 0 0 24px;
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  line-height: 1.05;
+  text-align: center;
+}
+
 .article-header h1 {
   max-width: 800px;
   margin: 0 0 20px;
@@ -427,7 +441,15 @@ p {
   line-height: 1.05;
 }
 
-.guide-index-intro p,
+.guide-index-intro > p:not(.eyebrow) {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
 .article-header p {
   max-width: 700px;
   margin: 0;
