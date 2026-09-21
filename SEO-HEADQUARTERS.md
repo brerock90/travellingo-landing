@@ -1,348 +1,453 @@
-# TravelLingo Website SEO Headquarters
+# TravelLingo Website Growth Plan
 
-**Site:** https://gotravellingo.com/  
-**Repo:** `travellingo-landing` (static site on Cloudflare Pages)  
-**Your capacity:** ~1 hour/day × 5 days/week ≈ **5 hours/week**  
+**Website:** https://gotravellingo.com/  
+**Project folder:** `travellingo-landing`  
+**Your time:** about **1 hour a day, 5 days a week**  
 **Last updated:** 2026-09-21  
 
-Use this file as the single source of truth for what to work on next. Open it at the start of each work session. Update the **Status** column and the **Log** at the bottom when you finish something.
+## What this file is
+
+This is your **homepage for growing the TravelLingo website**.
+
+Open it at the start of each work session. It tells you:
+
+1. What the goal is  
+2. What is already done  
+3. What to do next  
+4. How to use AI (Cursor) to do most of the writing and checking  
+5. What you should personally review before putting anything live  
+
+Update the checklist statuses and the **Work log** at the bottom as you go.
 
 ---
 
-## 1. Mission (keep this short)
+## How you and AI work together
 
-Grow organic discovery for TravelLingo by publishing **practical travel-phrase guides** that:
+You do **not** need to write full articles yourself.
 
-1. Rank for destination / language intent (“Italian travel phrases”, etc.)
-2. Naturally send readers to the App Store / Google Play
-3. Stay accurate to the app (phrases only from `lessons.ts`)
+### AI (Cursor) should usually:
+- Write new guide pages using the existing Spanish / French / Italian / German pages as a template
+- Copy the same look and layout (no redesign)
+- Pull German, French, Italian, and Spanish phrases **only** from the TravelLingo app lesson file (`lessons.ts`)
+- Update the Guides page, homepage cards, and sitemap when adding a new guide
+- Run checks for broken links, missing accents, mobile layout issues, and product wording mistakes
+- Suggest next SEO steps based on this plan
 
-**Not the mission:** build a media company, chase every keyword, redesign the brand, or ship a CMS.
+### You should usually:
+- Decide **what** to work on this week (one main project)
+- Provide or approve the hero image for a new guide
+- Preview the page locally
+- Ask AI to fix anything that looks wrong
+- Deploy when you are happy
+- Glance at Google Search Console once a week
+
+**Simple rule:** AI builds. You decide, review, and publish.
 
 ---
 
-## 2. Constraints (do not violate)
+## 1. The big goal
 
-### Time
-| Block | Minutes | Typical use |
+Help more travelers find TravelLingo through Google by publishing useful **travel phrase guides**.
+
+Good guides should:
+
+1. Answer real travel questions (for example: “Italian travel phrases”)
+2. Feel helpful first, salesy second
+3. Naturally point people to the App Store and Google Play
+4. Only show phrases that exist in the TravelLingo app
+
+### Not the goal
+- Redesigning the whole website
+- Building a big blog empire overnight
+- Adding a complicated content system (CMS)
+- Chasing every possible keyword
+
+---
+
+## 2. Rules to always follow
+
+### Time rule
+Work on **one main project per week**.
+
+Do not start a second big guide until the current one is:
+
+- finished
+- linked from the Guides page and homepage (if homepage shows guide cards)
+- added to the sitemap
+- published (or ready to publish)
+
+### Brand and product rules
+- Talk to **travelers preparing for a trip**
+- Never say **“beginner travelers”**
+- TravelLingo is **not** a full language course
+- TravelLingo is **not** mainly a phrasebook
+- Do **not** say speaking / speech recognition works offline
+- Do **not** say TravelLingo does advanced accent scoring
+- Closing brand line (when used):  
+  **Travel with confidence. Learn the phrases you’ll actually use.**
+- App languages: Spanish, French, Italian, German
+- If a phrase is not in `lessons.ts`, do **not** put it on the website
+
+### Website rules
+- Keep the current clean TravelLingo design
+- New guides should look like the existing language guides
+- Put new guides under `/guides/.../`
+- Update `sitemap.xml` whenever a new public page goes live
+- Do not use “coming soon” or waitlist language on marketing pages
+
+---
+
+## 3. What the site has right now
+
+### Main pages
+| Page | What it is | Notes |
 |---|---|---|
-| Mon | 60 | One unfinished content task OR technical SEO |
-| Tue | 60 | Continue same content task |
-| Wed | 60 | Finish + ship + sitemap/internal links |
-| Thu | 60 | Measurement / refresh / small wins |
-| Fri | 60 | Plan next week + backlog grooming |
+| Homepage `/` | Main landing page + guide cards | Keep as the front door |
+| `/guides/` | List of all travel language guides | Keep this updated |
+| Spanish guide | Live language guide | Exists |
+| French guide | Live language guide | Exists |
+| Italian guide | Language guide | Confirm it is live on the real website |
+| German guide | Language guide | Created; confirm it is live |
+| Support | Help page | Exists |
+| Privacy | Privacy page | Exists |
+| `sitemap.xml` | List of pages for Google | Keep updated |
+| `robots.txt` | Tells Google it can crawl the site | Exists |
 
-Rule: **one primary project per week.** Do not start a second guide until the current one is live and linked.
+### Good news
+You already have a strong start: language guides for Spanish, French, Italian, and German, plus related links between them.
 
-### Product / brand accuracy
-- Audience: travelers preparing for a trip — **never** “beginner travelers”
-- TravelLingo is **not** a fluency course and **not** primarily a phrasebook
-- Speech recognition **requires connectivity** — never imply offline speaking practice
-- No advanced accent-scoring claims
-- Official tagline only when closing branded CTAs:  
-  *Travel with confidence. Learn the phrases you’ll actually use.*
-- Languages in app: Spanish, French, Italian, German
-- Italian/French/Spanish guide phrases must exist in app `lessons.ts` before publishing
-
-### Site architecture (keep it)
-- Static HTML under `public/`
-- Guides at `/guides/<slug>/`
-- Reuse Spanish/French/Italian guide HTML/CSS patterns — no redesign
-- Root-relative asset paths (`/styles.css`, `/assets/...`)
-- Update `sitemap.xml` when a new public URL goes live
-- No waitlist / “coming soon” language on marketing pages
+### Still useful next steps
+1. Make sure Italian and German are fully live and listed for Google
+2. Use Google Search Console every week (even for 10–15 minutes)
+3. Later: write situation guides (restaurants, hotels, trains) and destination guides
+4. Improve older pages only when Search Console shows a clear problem
 
 ---
 
-## 3. Current baseline (as of 2026-09-21)
+## 4. What “success” looks like in 90 days
 
-### Live / ready pages
-| URL | Role | Status |
+Check these about once a month (not every day):
+
+| What to watch | What “good” looks like | Where to look |
 |---|---|---|
-| `/` | Homepage + guide preview cards | Live pattern |
-| `/guides/` | Guide index | Live |
-| `/guides/spanish-for-travel/` | Spanish pillar | Live |
-| `/guides/travel-phrases-in-french/` | French companion | Live |
-| `/guides/travel-phrases-in-italian/` | Italian companion | Local / ship when ready |
-| `/support.html` | Support | Live |
-| `/privacy.html` | Privacy | Live |
-| `/sitemap.xml` | Sitemap | Present |
-| `/robots.txt` | Crawl rules | Present |
+| Guide pages found by Google | All published guides show up | Google Search Console → Pages |
+| People seeing your pages | Views/impressions go up over time | Search Console → Performance |
+| People clicking | Clicks go up over time | Search Console → Performance |
+| App downloads from the site | Steady or rising | App store / analytics if you use them |
+| Publishing pace | About 1 useful new page every 1–2 weeks | This work log |
 
-### Gaps (high leverage)
-1. **German language guide** missing (completes the 4-language set)
-2. **Search Console** setup / monitoring not yet a weekly habit
-3. No **destination-focused** guides yet (high intent, later phase)
-4. No systematic **internal linking** between language guides
-5. Homepage / guides index may need copy refresh after German ships
-6. Italian page must be confirmed deployed + indexed
+**Best strategy right now:** keep the four language guides strong, then add situation pages (like restaurants or hotels) that link back to those language guides.
 
 ---
 
-## 4. North-star outcomes (90 days)
+## 5. What to do next (top to bottom)
 
-Track these monthly — not daily.
+### Step A — Finish the foundation
+- [x] Italian guide in sitemap
+- [x] Sitemap submitted in Google Search Console
+- [x] robots.txt checked
+- [x] Quick mobile check of homepage, Guides page, and one article
+- [X ] Confirm Italian is live on gotravellingo.com
+- [X ] Confirm German is live on gotravellingo.com
+- [X ] Ask Google to index any newly published guides
 
-| Metric | Target direction | Where to look |
-|---|---|---|
-| Indexed guide pages | All published guides indexed | Google Search Console → Pages |
-| Non-brand impressions | Up month over month | GSC → Performance |
-| Clicks to guides | Up month over month | GSC → Performance |
-| App store referrals from site | Stable or up | Analytics / store campaign if used |
-| Guide completion rate | Finish 1 substantial content unit / 1–2 weeks | This HQ log |
+### Step B — Keep the language set healthy
+- [x] German guide created
+- [x] German card on Guides page and homepage
+- [x] German URL in sitemap
+- [x] Related Travel Language Guides links between languages
+- [ ] Quick AI check that all related links still work after deploy
 
-**Primary SEO bet:** finish the **language-phrase guide cluster** (ES / FR / IT / DE), then expand into **destination** and **situation** pages that link back into that cluster.
+### Step C — Improve existing pages (good Thursday tasks)
+Ask AI to help with one small item:
+- Improve a page title/description only if Search Console shows lots of views but few clicks
+- Add or fix one internal link
+- Compress a large image if a page feels slow
+- Re-check mobile layout on one guide
+- Optional cleanup: change Support and Privacy links from `/support.html` and `/privacy.html` to `/support` and `/privacy` (the `.html` links already work via redirect; this just skips the extra hop)
 
----
+### Step D — New content ideas (after foundation is solid)
+Do **one** at a time. Ask AI to write it using the current guide template.
 
-## 5. Priority ladder (work top → bottom)
-
-### P0 — Foundation (do first if incomplete)
-- [ ] Confirm Italian guide deployed and in `sitemap.xml`
-- [ ] Submit / resubmit sitemap in Google Search Console
-- [ ] Verify `robots.txt` allows crawling and points at sitemap
-- [ ] Spot-check mobile: homepage, `/guides/`, one article
-
-### P1 — Finish language cluster (next 2–4 weeks)
-- [ ] German guide: `/guides/travel-phrases-in-german/` (mirror FR/IT structure)
-- [ ] Add German card to `/guides/` and homepage preview
-- [ ] Add German URL to `sitemap.xml`
-- [ ] Cross-link language guides (see §7)
-
-### P2 — Strengthen existing pages (ongoing Thursdays)
-- [ ] Refresh thin sections if GSC shows impressions but low CTR
-- [ ] Improve titles/meta only when CTR data justifies it
-- [ ] Add 1–2 natural internal links per older guide when new guides ship
-- [ ] Compress oversized guide images only if load feels slow
-
-### P3 — Expand topics (after German is live)
-Ship **one** of these at a time:
-
-**Situation pages** (reuse phrase categories from the app)
-- Restaurants & cafés phrases (language-specific or multi-language hub)
-- Hotel check-in phrases
-- Asking for directions
+**Situation guides**
+- Restaurant and café phrases
+- Hotel phrases
+- Directions phrases
 - Transportation phrases
-- Emergency / health phrases (careful, accurate)
+- Emergency / health phrases (be careful and accurate)
 
-**Destination pages** (later; need real photos + careful claims)
-- e.g. “Useful Spanish for Mexico travel” / “French for Paris trip”
-- Only after language pillars exist
-- Must not invent phrases outside the app
+**Destination guides** (later)
+- Example: useful Spanish for a Mexico trip
+- Needs a real photo and careful wording
+- Still only use phrases from the app
 
-**Comparison / intent pages** (careful; avoid fluff)
-- Travel phrases vs full language course
+**Helpful explainer pages**
+- How to practice travel phrases before a trip
+- Travel phrases vs a full language course
+
+### Step E — Later / maybe never
+- Big redesign
+- CMS
+- Newsletter
+- Lots of thin AI blog posts with no real value
+
+---
+
+## 6. How to make a new guide with AI
+
+A full new guide usually takes about **2–4 of your hours**, because AI does the heavy writing.
+
+### Day 1 — Decide and gather (about 30–60 minutes)
+1. Choose the next guide from the backlog below
+2. Make sure you have (or can get) one good royalty-free photo
+3. Put the photo in `public/assets/` if needed
+4. Open Cursor and paste a clear request (see section 11)
+
+### Day 2 — Let AI build (about 30–60 minutes)
+Ask AI to:
+1. Copy the structure of an existing language guide
+2. Write the new page
+3. Use only phrases from `lessons.ts`
+4. Update the Guides page, homepage cards, and sitemap
+5. Run a check list (links, accents, mobile, brand rules)
+
+### Day 3 — You review (about 30–60 minutes)
+Look at the page yourself and ask:
+- Does it look like the other guides?
+- Are accents / special letters correct?
+- Do the store badges work?
+- Does it feel helpful, not spammy?
+- Did AI invent any phrases? (If unsure, ask AI to re-check against `lessons.ts`)
+
+### Day 4 — Publish and confirm (about 15–30 minutes)
+1. Deploy using your normal process
+2. Open the live URL on your phone
+3. In Search Console, ask Google to index the new page if needed
+4. Mark the backlog item Done
+5. Write a short note in the Work log
+
+---
+
+## 7. Link rules (keep it simple)
+
+Every new guide should be linked from:
+
+1. The Guides page (`/guides/`)
+2. The homepage guide cards (if that section exists)
+3. The sitemap
+4. The Related Travel Language Guides section on other language guides (when it makes sense)
+
+Every guide should also link back to:
+
+- `/guides/`
+- App Store and Google Play badges (already on the pages)
+
+Never link to a page that is not published yet.
+
+---
+
+## 8. Backlog (your to-do list)
+
+Statuses you can use: `Queued` / `In progress` / `Done` / `Blocked`
+
+| # | Project | Status | Notes |
+|---|---|---|---|
+| 1 | Confirm Italian is live + indexed | Queued | Open live URL; check Search Console |
+| 2 | Confirm German is live + indexed | Queued | Open live URL; check Search Console |
+| 3 | Related links across Spanish/French/Italian/German | Done | Already added |
+| 4 | First situation guide (restaurants) | Queued | Ask AI to write after language set is live |
+| 5 | Hotel phrases guide | Queued | |
+| 6 | Getting-around phrases guide | Queued | |
+| 7 | “How to prepare travel phrases before a trip” | Queued | Good brand-supporting page |
+| 8 | First destination guide | Queued | Needs photo + careful wording |
+| 9 | Title/description improvements based on Search Console | Queued | Wait until you have a few weeks of data |
+| 10 | Light support/privacy SEO cleanup | Queued | Only if Google shows problems |
+| 11 | Optional: update Support/Privacy links to `/support` and `/privacy` | Queued | Not urgent. Live `.html` links already redirect successfully; cleanup only removes the redirect hop |
+
+---
+
+## 9. Weekly schedule (about 5 hours total)
+
+### Monday — Pick one thing
+- Open this file
+- Choose **one** backlog item
+- Ask AI to start it, or review what AI already made
+
+### Tuesday — Continue
+- Keep working on the same item only
+- Ask AI for fixes if something looks off
+
+### Wednesday — Finish and prepare to publish
+- Finish the page
+- Ask AI to run final checks
+- Preview on desktop and phone
+
+### Thursday — Check and maintain
+Pick one small task:
+- Look at Search Console
+- Ask AI to check for broken links
+- Fix one small issue
+- Improve one weak title only if data supports it
+
+### Friday — Wrap up
+- UpdateStatuses in this file
+- Write next week’s one priority in the Work log
+- Stop. Do not start a brand-new big project late on Friday
+
+### Once a month
+Replace Thursday with a bigger review:
+- Which pages got the most views?
+- Which pages got clicks?
+- Should next month focus on a new page, or improving an old one?
+
+---
+
+## 10. Google Search Console (in plain English)
+
+Google Search Console is a free Google tool that shows:
+
+- whether Google found your pages
+- which searches show your site
+- how often people click
+
+### Set up once
+- [ ] Add `gotravellingo.com` in Google Search Console
+- [ ] Submit sitemap: `https://gotravellingo.com/sitemap.xml`
+- [ ] Confirm the site uses https
+
+### Check weekly (10–20 minutes)
+Ask yourself:
+1. Did any new page have errors?
+2. Which guide got the most views?
+3. Which guide got clicks?
+4. Is there an obvious broken page to fix?
+
+### Important patience rule
+After publishing a new page, wait **about 4–8 weeks** before rewriting it just for SEO.
+
+---
+
+## 11. Ready-to-paste AI request
+
+When you want Cursor to create the next guide, paste something like this:
+
+> Please create the next TravelLingo guide.  
+> Use the existing Spanish, French, Italian, and German guides as the exact visual and structural template.  
+> Do not redesign the site.  
+> Only use phrases that exist in the TravelLingo app lesson file (`lessons.ts`).  
+> Update `/guides/`, the homepage guide cards if present, and `sitemap.xml`.  
+> Add or update Related Travel Language Guides links only to published pages.  
+> Then run checks for: one H1, accents/special characters, mobile overflow, store badges, brand wording rules, and broken internal links.  
+> Follow `SEO-HEADQUARTERS.md`.  
+> Do not commit, push, or deploy unless I ask.
+
+When you want AI to check the site:
+
+> Please review the TravelLingo website against `SEO-HEADQUARTERS.md`.  
+> Check published guides for broken links, missing related links, product wording mistakes (offline speech recognition, beginner travelers, fluency claims), and mobile layout issues.  
+> Report problems first. Do not change files until I approve.
+
+---
+
+## 12. Topics that fit TravelLingo
+
+### Strong topics you already own
+- Spanish travel phrases
+- French travel phrases
+- Italian travel phrases
+- German travel phrases
+
+### Good next topics
+- Restaurant phrases for [language]
+- Hotel phrases for [language]
+- Directions / transportation phrases
 - How to practice travel phrases before a trip
 
-### P4 — Do later / only if capacity
-- Blog cadence beyond guides
-- Email / newsletter
-- Localized site versions
-- CMS
-- Heavy redesign
-- Affiliate content
-
----
-
-## 6. Content production playbook (one guide ≈ 3–5 hours)
-
-Use this checklist for every new guide. Copy it into the weekly log when you start.
-
-### Session A (≈60–90 min) — Research & outline
-1. Open app lesson source: `lessons.ts` for that language
-2. List phrases by category you will include (greetings, food, directions, transport, hotel, shopping, misunderstanding, emergency)
-3. Reject any phrase not in the app
-4. Draft H1, meta title, meta description, URL slug
-5. Confirm or source one royalty-free hero image into `public/assets/`
-
-### Session B (≈60–90 min) — Write body
-1. Duplicate the French or Italian guide HTML as the template
-2. Replace metadata, breadcrumbs, hero, phrases, copy
-3. Keep structure identical (hero → intro → H2 sections → CTA)
-4. Preserve store badge URLs and tagline
-
-### Session C (≈45–60 min) — Integrate & QA
-1. Add card on `/guides/index.html`
-2. Add card on homepage guide section
-3. Add URL to `sitemap.xml`
-4. Local preview: accents, mobile overflow, one H1, badges
-5. Deploy when ready (your process — not automatic from this HQ)
-
-### After publish (≈15–30 min next day)
-1. Request indexing in Search Console (if available)
-2. Click through live URLs
-3. Mark status Done in §8 backlog
-4. Add 1 internal link from an older related guide
-
-**Estimated cadence at 5 hrs/week:** ~1 full language guide every **1–2 weeks**, or 1 smaller refresh week between guides.
-
----
-
-## 7. Internal linking rules
-
-Minimum links for every new guide:
-- Homepage preview card → guide
-- `/guides/` card → guide
-- Guide → `/guides/`
-- Guide CTA → App Store + Google Play (existing badges)
-
-When 3+ language guides exist, add a short “Related Travel Language Guides” note near the end of each article linking to the other languages — **only** to published pages.
-
-Do not link to unpublished URLs.
-
----
-
-## 8. Content backlog (ordered)
-
-Update status: `Queued` / `In progress` / `Done` / `Blocked`
-
-| # | Asset | Suggested slug | Est. hours | Status | Notes |
-|---|---|---|---|---|---|
-| 1 | Confirm Italian live + indexed | `/guides/travel-phrases-in-italian/` | 0.5 | Queued | Verify deploy + GSC |
-| 2 | German travel phrases guide | `/guides/travel-phrases-in-german/` | 4–5 | Queued | Mirror FR/IT; phrases from `lessons.ts` |
-| 3 | Cross-links across ES/FR/IT/DE | n/a | 1 | Queued | After German ships |
-| 4 | Title/meta CTR pass on top guides | n/a | 1–2 | Queued | After 4–6 weeks of GSC data |
-| 5 | Situation: restaurants (start with one language) | TBD | 3–4 | Queued | After language cluster |
-| 6 | Situation: hotels | TBD | 3–4 | Queued | |
-| 7 | Situation: getting around | TBD | 3–4 | Queued | |
-| 8 | Destination highlight #1 | TBD | 4–5 | Queued | Needs photo + careful regional copy |
-| 9 | “How to prepare travel phrases before a trip” | TBD | 2–3 | Queued | Supports brand positioning |
-| 10 | Privacy/support SEO light pass | existing pages | 1 | Queued | Only if crawl/index issues |
-
----
-
-## 9. Weekly operating rhythm
-
-### Monday — Choose & start
-- Read this HQ (§5–§8)
-- Pick **one** backlog item
-- Work 50 minutes; leave a 10-minute note in the Log
-
-### Tuesday / Wednesday — Build
-- Continue the same item only
-- Ship by end of Wednesday if possible
-
-### Thursday — Measure & maintain
-Pick **one**:
-- Search Console: queries, pages, coverage
-- Fix a broken link / mobile issue
-- Add one internal link
-- Improve one underperforming title (only with data)
-
-### Friday — Close the loop
-- Update backlog statuses
-- Write next week’s single priority in the Log
-- Stop. Do not start a new big project Friday afternoon
-
-### Monthly (first Thursday of month, replace normal Thursday)
-- Review impressions/clicks by page
-- Decide: new content vs refresh existing
-- Archive ideas that don’t fit product accuracy rules
-
----
-
-## 10. Measurement setup checklist
-
-Do once, then check weekly on Thursdays.
-
-- [ ] Google Search Console property for `gotravellingo.com`
-- [ ] Sitemap submitted: `https://gotravellingo.com/sitemap.xml`
-- [ ] Preferred domain / HTTPS confirmed
-- [ ] Optional: privacy-friendly analytics (only if you want referral paths)
-- [ ] Spreadsheet or note for monthly snapshot:  
-  `Date | Clicks | Impressions | CTR | Top page | Top query`
-
-Do **not** optimize titles weekly without data. Give new pages **4–8 weeks** before major rewrites.
-
----
-
-## 11. Keyword / topic map (working)
-
-Focus on **intent match**, not volume chasing.
-
-### Language pillars (owned)
-- Spanish for travel / Spanish travel phrases
-- French travel phrases / practical French for travelers
-- Italian travel phrases / practical Italian for travelers
-- German travel phrases / practical German for travelers ← next
-
-### Supporting intents (later)
-- [language] restaurant phrases
-- [language] hotel phrases
-- [language] directions / transportation
-- travel phrases before a trip
-- how to practice travel language offline-safe claims only where true (audio/reference ≠ speech recognition)
-
 ### Avoid for now
-- Generic “learn Italian online” fluency SERPs
-- Phrasebook dump pages with no narrative
-- Thin AI-spun destination posts with no unique value
-- Keyword-stuffed titles that break brand voice
+- Generic “become fluent” pages
+- Thin AI pages with no real travel value
+- Keyword-stuffed titles that sound unnatural
+- Claims the app cannot support
 
 ---
 
-## 12. Technical SEO checklist (static site)
+## 13. Quick check list before publishing
 
-Run when shipping pages or monthly.
+Ask AI to verify these, then spot-check yourself:
 
-- [ ] Unique `<title>` and meta description per page
-- [ ] Canonical matches live URL
-- [ ] One H1; logical H2/H3
-- [ ] `sitemap.xml` includes only live public URLs
-- [ ] `robots.txt` allows `/` and lists sitemap
-- [ ] Images: descriptive alt, controlled crop via existing CSS, lazy-load cards only
-- [ ] No orphan pages (every new guide linked from `/guides/` + ideally homepage)
-- [ ] Fast enough on mobile (avoid huge unoptimized heroes when possible)
-- [ ] Store badge links unchanged and working
-
----
-
-## 13. Agent / Cursor brief (paste when requesting help)
-
-When asking Cursor to build the next guide, paste:
-
-> Create the next TravelLingo guide using `/guides/travel-phrases-in-french/` and `/guides/travel-phrases-in-italian/` as the structural template. Do not redesign. Pull phrases only from `lessons.ts`. Update `/guides/`, homepage cards if present, and `sitemap.xml`. Do not commit/push/deploy unless I ask. Follow product accuracy rules in `SEO-HEADQUARTERS.md`.
+- [ ] Page title and short description make sense
+- [ ] Canonical URL is correct
+- [ ] Exactly one main title (H1)
+- [ ] Headings are in a sensible order
+- [ ] All phrases exist in the app lesson file
+- [ ] Accents / umlauts / special characters look right
+- [ ] Hero image loads
+- [ ] Page looks okay on a phone
+- [ ] Guides page card exists
+- [ ] Homepage card exists (if homepage shows cards)
+- [ ] Sitemap includes the new URL
+- [ ] Related links only go to published pages
+- [ ] App Store and Google Play badges still work
+- [ ] No offline speech-recognition claims
+- [ ] No “beginner travelers” wording
 
 ---
 
-## 14. Decision rules (when stuck)
+## 14. If you get stuck
 
-| Situation | Decision |
+| Situation | What to do |
 |---|---|
-| Less than 45 minutes today | Do measurement or a 1-link internal-link task — do not start a new guide |
-| Guide 80% done | Finish and ship before starting anything else |
-| Unsure if a phrase is allowed | Check `lessons.ts` — if absent, omit it |
-| Tempted to redesign | No — improve content and linking instead |
-| Page got impressions, low CTR | Test a clearer title/meta; keep H1 aligned |
-| Page got clicks, high bounce | Improve intro + early phrase usefulness; check mobile |
-| Want more traffic fast | Ship German guide; then situation pages — not ads-heavy redesign |
+| You have less than 45 minutes | Ask AI for a small check or fix. Do not start a whole new guide. |
+| A guide is almost done | Finish and publish it before starting anything else. |
+| You are unsure about a phrase | Ask AI to check `lessons.ts`. If it is missing, leave it out. |
+| You feel tempted to redesign | Stop. Improve content and links instead. |
+| A page gets views but few clicks | Ask AI to suggest a clearer title and description. |
+| You want faster growth | Publish the next useful guide. Do not rebuild the whole site. |
 
 ---
 
 ## 15. Work log
 
-Add a line after each work session.
+Write one line after each work session.
 
 | Date | Minutes | What I did | Next action |
 |---|---|---|---|
-| 2026-09-21 | — | HQ file created | Confirm Italian deploy + start German research |
+| 2026-09-21 | — | Growth plan rewritten for AI-first workflow | Confirm Italian + German are live |
 |  |  |  |  |
 |  |  |  |  |
 
 ---
 
-## 16. One-week starter plan (copy into Log)
+## 16. Suggested plan for this week
 
-**Week goal:** Italian confirmed live + German guide Session A complete.
+**Week goal:** Confirm Italian and German are live, then choose the first situation guide.
 
-| Day | Task |
+| Day | What to do |
 |---|---|
-| Mon | Deploy/verify Italian; GSC sitemap check (60 min) |
-| Tue | German: extract phrases from `lessons.ts` + outline sections (60 min) |
-| Wed | German: find/confirm hero image + draft metadata/slug (60 min) |
-| Thu | GSC review + add any missing internal links on FR/IT (60 min) |
-| Fri | Update this HQ backlog statuses; lock next week = German draft HTML (30–60 min) |
+| Mon | Open live Italian and German URLs; confirm they work on phone |
+| Tue | In Search Console, check whether Google sees the new guides |
+| Wed | Ask AI to propose the best next situation guide and draft an outline |
+| Thu | Approve the outline; ask AI to write the first draft if ready |
+| Fri | Update this backlog and pick next week’s one priority |
 
 ---
 
-*End of headquarters. Keep this file lean — move finished detail into git commits and leave only current priorities here.*
+## Plain-English glossary
+
+| Term | Meaning |
+|---|---|
+| SEO | Helping your site show up in Google search results |
+| Guide | A helpful article page on your website |
+| Sitemap | A file that lists your public pages for Google |
+| Indexing | Google finding and storing a page so it can appear in search |
+| Search Console | Google’s free dashboard for site search performance |
+| Canonical URL | The official web address for a page |
+| Internal link | A link from one of your pages to another of your pages |
+| CTR | Click-through rate: how often people click after seeing your page in Google |
+| Deploy | Putting your local website changes onto the live website |
+
+---
+
+Keep this file simple.  
+When something is finished, mark it Done and move on.  
+Let AI do the writing and checking. You stay in charge of priorities, review, and publishing.
