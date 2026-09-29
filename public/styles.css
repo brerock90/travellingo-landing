@@ -75,6 +75,35 @@ body {
   border-radius: 4px;
 }
 
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  margin-left: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.nav-toggle-bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--navy);
+  border-radius: 1px;
+}
+
+.nav-toggle:focus-visible {
+  outline: 3px solid rgba(242, 140, 40, 0.35);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
 .logo-img {
   width: 48px;
   height: 48px;
@@ -797,20 +826,13 @@ p {
 }
 
 .support-contact-card {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 36px;
   max-width: 1080px;
   margin: 0 auto 64px;
   padding: 0;
   background: transparent;
   border-radius: 0;
   box-shadow: none;
-}
-
-.support-contact-card div {
-  max-width: 620px;
+  text-align: left;
 }
 
 .support-contact-card h2 {
@@ -819,12 +841,12 @@ p {
 }
 
 .support-contact-card p {
+  max-width: 620px;
   margin: 0;
 }
 
 .support-button {
-  flex-shrink: 0;
-  margin-top: 0;
+  margin-top: 20px;
 }
 
 .support-section {
@@ -1070,6 +1092,35 @@ footer p:last-child {
   .site-nav {
     width: 100%;
     gap: 10px 16px;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .site-header:has(.nav-toggle) {
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 0;
+  }
+
+  .site-header:has(.nav-toggle) .site-nav {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    width: 100%;
+    padding: 6px 0 2px;
+  }
+
+  .site-header:has(.nav-toggle) .site-nav.is-open {
+    display: flex;
+  }
+
+  .site-header:has(.nav-toggle) .site-nav a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
   }
 
   .store-buttons {
