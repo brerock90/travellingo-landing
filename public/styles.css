@@ -347,6 +347,17 @@ p {
   max-width: 520px;
 }
 
+.guides-preview a.guide-card,
+.guides-preview a.guide-card:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.guides-preview a.guide-card:focus-visible {
+  outline: 3px solid rgba(242, 140, 40, 0.35);
+  outline-offset: 3px;
+}
+
 .guide-card-image {
   display: block;
   width: 100%;
