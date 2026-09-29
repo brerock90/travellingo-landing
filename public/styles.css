@@ -328,7 +328,7 @@ p {
 
 .guide-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
 }
 
@@ -344,7 +344,6 @@ p {
 
 .guides-preview .guide-card {
   width: 100%;
-  max-width: 520px;
 }
 
 .guides-preview a.guide-card,
@@ -414,6 +413,9 @@ p {
 }
 
 .guides-all-link {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 28px;
   margin: 24px 0 0;
 }
 
@@ -506,6 +508,11 @@ p {
 
 .guide-index-grid .guide-card {
   max-width: 520px;
+}
+
+.guide-index-grid:has(> .guide-card:only-child) {
+  grid-template-columns: minmax(0, 520px);
+  justify-content: center;
 }
 
 .guide-index-note {
@@ -802,23 +809,27 @@ p {
 
 /* Support Page */
 
-.support-page {
+.support-page,
+.privacy-page {
   padding: 0 7% 56px;
 }
 
-.support-intro {
+.support-intro,
+.privacy-intro {
   max-width: 1080px;
   margin: 0 auto;
   padding: 56px 0 24px;
   text-align: left;
 }
 
-.support-intro .eyebrow {
+.support-intro .eyebrow,
+.privacy-intro .eyebrow {
   margin-top: 0;
   margin-bottom: 18px;
 }
 
-.support-intro h1 {
+.support-intro h1,
+.privacy-intro h1 {
   max-width: 760px;
   margin: 0 0 24px;
   font-size: clamp(2.5rem, 6vw, 5rem);
@@ -828,11 +839,96 @@ p {
   letter-spacing: -0.055em;
 }
 
-.support-intro p:last-child {
+.support-intro p:last-child,
+.privacy-intro .intro-copy {
   max-width: 620px;
   margin: 0;
   font-size: 0.98rem;
   line-height: 1.7;
+}
+
+.privacy-intro .updated-date {
+  margin: 14px 0 0;
+  font-size: 0.92rem;
+}
+
+.policy-card {
+  max-width: 1080px;
+  margin: 12px auto 0;
+  overflow: hidden;
+  background: var(--white);
+  border-radius: 28px;
+  box-shadow: 0 10px 30px rgba(16, 36, 63, 0.07);
+}
+
+.policy-section {
+  padding: 32px 40px;
+  border-bottom: 1px solid rgba(38, 62, 94, 0.1);
+}
+
+.policy-section:last-child {
+  border-bottom: 0;
+}
+
+.policy-section:nth-child(even) {
+  background: var(--soft-blue);
+}
+
+.policy-section h2 {
+  margin: 0 0 14px;
+  font-size: 1.35rem;
+}
+
+.policy-section p,
+.policy-section li {
+  line-height: 1.7;
+}
+
+.policy-section p {
+  margin: 0 0 16px;
+}
+
+.policy-section ul {
+  margin: 0 0 16px;
+  padding-left: 1.4rem;
+}
+
+.policy-section li {
+  margin-bottom: 8px;
+}
+
+.policy-section a {
+  color: var(--navy);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.policy-section a:hover {
+  color: var(--orange);
+}
+
+.policy-section a:focus-visible {
+  outline: 3px solid rgba(242, 140, 40, 0.35);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+.summary-box,
+.contact-card {
+  padding: 22px 24px;
+  border-radius: 16px;
+  background: var(--warm-cream);
+}
+
+.summary-box {
+  margin-top: 20px;
+  border-left: 4px solid var(--orange);
+  border-radius: 0 16px 16px 0;
+}
+
+.summary-box p:last-child,
+.contact-card p:last-child {
+  margin-bottom: 0;
 }
 
 .support-contact-card {
@@ -1055,11 +1151,13 @@ footer p:last-child {
     width: min(300px, 100%);
   }
 
-  .support-intro {
+  .support-intro,
+  .privacy-intro {
     padding-top: 24px;
   }
 
-  .support-intro h1 {
+  .support-intro h1,
+  .privacy-intro h1 {
     font-size: clamp(2.6rem, 12vw, 4rem);
   }
 
@@ -1202,13 +1300,23 @@ footer p:last-child {
   }
 
   .support-page,
+  .privacy-page,
   .guides-page,
   .article-page {
     padding-bottom: 40px;
   }
 
-  .support-intro {
+  .support-intro,
+  .privacy-intro {
     padding-top: 20px;
+  }
+
+  .policy-section {
+    padding: 28px 24px;
+  }
+
+  .policy-card {
+    border-radius: 22px;
   }
 
   .support-contact-card {
