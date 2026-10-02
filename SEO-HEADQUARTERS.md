@@ -3,7 +3,7 @@
 **Website:** https://gotravellingo.com/  
 **Project folder:** `travellingo-landing`  
 **Your time:** about **1 hour a day, 5 days a week**  
-**Last updated:** 2026-09-21  
+**Last updated:** 2026-09-29  
 
 ## What this file is
 
@@ -106,8 +106,8 @@ Do not start a second big guide until the current one is:
 | `/guides/` | List of all travel language guides | Keep this updated |
 | Spanish guide | Live language guide | Exists |
 | French guide | Live language guide | Exists |
-| Italian guide | Language guide | Confirm it is live on the real website |
-| German guide | Language guide | Created; confirm it is live |
+| Italian guide | Live language guide | Live on gotravellingo.com |
+| German guide | Live language guide | Live on gotravellingo.com |
 | Support | Help page | Exists |
 | Privacy | Privacy page | Exists |
 | `sitemap.xml` | List of pages for Google | Keep updated |
@@ -117,10 +117,9 @@ Do not start a second big guide until the current one is:
 You already have a strong start: language guides for Spanish, French, Italian, and German, plus related links between them.
 
 ### Still useful next steps
-1. Make sure Italian and German are fully live and listed for Google
-2. Use Google Search Console every week (even for 10–15 minutes)
-3. Later: write situation guides (restaurants, hotels, trains) and destination guides
-4. Improve older pages only when Search Console shows a clear problem
+1. Use Google Search Console every week (even for 10–15 minutes)
+2. Later: write situation guides (restaurants, hotels, trains) and destination guides
+3. Improve older pages only when Search Console shows a clear problem
 
 ---
 
@@ -147,16 +146,16 @@ Check these about once a month (not every day):
 - [x] Sitemap submitted in Google Search Console
 - [x] robots.txt checked
 - [x] Quick mobile check of homepage, Guides page, and one article
-- [X ] Confirm Italian is live on gotravellingo.com
-- [X ] Confirm German is live on gotravellingo.com
-- [X ] Ask Google to index any newly published guides
+- [x] Confirm Italian is live on gotravellingo.com
+- [x] Confirm German is live on gotravellingo.com
+- [x] Ask Google to index any newly published guides
 
 ### Step B — Keep the language set healthy
 - [x] German guide created
 - [x] German card on Guides page and homepage
 - [x] German URL in sitemap
 - [x] Related Travel Language Guides links between languages
-- [ ] Quick AI check that all related links still work after deploy
+- [x] Quick AI check that all related links still work after deploy
 
 ### Step C — Improve existing pages (good Thursday tasks)
 Ask AI to help with one small item:
@@ -164,7 +163,7 @@ Ask AI to help with one small item:
 - Add or fix one internal link
 - Compress a large image if a page feels slow
 - Re-check mobile layout on one guide
-- Optional cleanup: change Support and Privacy links from `/support.html` and `/privacy.html` to `/support` and `/privacy` (the `.html` links already work via redirect; this just skips the extra hop)
+- [x] Optional cleanup: change Support and Privacy links from `/support.html` and `/privacy.html` to `/support` and `/privacy` (done 2026-09-29; live after the next deploy)
 
 ### Step D — New content ideas (after foundation is solid)
 Do **one** at a time. Ask AI to write it using the current guide template.
@@ -252,9 +251,9 @@ Statuses you can use: `Queued` / `In progress` / `Done` / `Blocked`
 
 | # | Project | Status | Notes |
 |---|---|---|---|
-| 1 | Confirm Italian is live + indexed | Queued | Open live URL; check Search Console |
-| 2 | Confirm German is live + indexed | Queued | Open live URL; check Search Console |
-| 3 | Related links across Spanish/French/Italian/German | Done | Already added |
+| 1 | Confirm Italian is live + indexed | Done | Live on gotravellingo.com. Indexing requested 2026-09-29. |
+| 2 | Confirm German is live + indexed | Done | Live on gotravellingo.com. Indexing requested 2026-09-29. |
+| X | Related links across Spanish/French/Italian/German | Done | Already added |
 | 4 | First situation guide (restaurants) | Queued | Ask AI to write after language set is live |
 | 5 | Hotel phrases guide | Queued | |
 | 6 | Getting-around phrases guide | Queued | |
@@ -262,7 +261,7 @@ Statuses you can use: `Queued` / `In progress` / `Done` / `Blocked`
 | 8 | First destination guide | Queued | Needs photo + careful wording |
 | 9 | Title/description improvements based on Search Console | Queued | Wait until you have a few weeks of data |
 | 10 | Light support/privacy SEO cleanup | Queued | Only if Google shows problems |
-| 11 | Optional: update Support/Privacy links to `/support` and `/privacy` | Queued | Not urgent. Live `.html` links already redirect successfully; cleanup only removes the redirect hop |
+| 11 | Optional: update Support/Privacy links to `/support` and `/privacy` | Done | Links and sitemap updated 2026-09-29. Live after the next deploy. Old `.html` addresses still redirect. |
 
 ---
 
@@ -413,8 +412,9 @@ Write one line after each work session.
 | Date | Minutes | What I did | Next action |
 |---|---|---|---|
 | 2026-09-21 | — | Growth plan rewritten for AI-first workflow | Confirm Italian + German are live |
-|  |  |  |  |
-|  |  |  |  |
+| 2026-09-29 | — | Situation Guides index, homepage guide layout, Support/Privacy clean URLs, Privacy page matched to the site | Deploy when ready |
+| 2026-09-29 | — | Italian and German confirmed live; Google asked to index all pages | Watch Search Console for indexing |
+| 2026-09-29 | — | Related guide links checked on the live site | All related links returned a working page |
 
 ---
 
